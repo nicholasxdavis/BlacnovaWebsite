@@ -12,21 +12,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Our Projects | Blacnova Development</title>
-    <meta name="description" content="Explore our portfolio of successful web development projects, digital solutions, and innovative tools built for businesses in Las Cruces and beyond.">
-    <meta name="keywords" content="web development portfolio, Las Cruces projects, digital solutions, client work, web design examples">
+    <title>Projects | Blacnova Development</title>
+    <meta name="description" content="Client websites across Las Cruces and Mesilla, plus Pixelvida, Block Blast, and other game experiments built in Lua and Love2D.">
+    <meta name="keywords" content="web development portfolio, Las Cruces projects, client websites, Pixelvida, game development, Love2D">
     <link rel="canonical" href="https://www.blacnova.com/projects">
     
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.blacnova.com/projects">
-    <meta property="og:title" content="Our Projects | Blacnova Development">
-    <meta property="og:description" content="Explore our portfolio of successful web development projects and digital solutions.">
+    <meta property="og:title" content="Projects | Blacnova Development">
+    <meta property="og:description" content="Client websites and game development from Blacnova in Las Cruces, New Mexico.">
     <meta property="og:image" content="https://www.blacnova.com/img/hero.png">
 
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://www.blacnova.com/projects">
-    <meta property="twitter:title" content="Our Projects | Blacnova Development">
-    <meta property="twitter:description" content="Explore our portfolio of successful web development projects and digital solutions.">
+    <meta property="twitter:title" content="Projects | Blacnova Development">
+    <meta property="twitter:description" content="Client websites and game development from Blacnova in Las Cruces, New Mexico.">
     <meta property="twitter:image" content="https://www.blacnova.com/img/hero.png">
 
     <link rel="icon" href="../../ui/img/bn.png" type="image/png">
@@ -347,56 +347,177 @@
     
     <main class="mt-24 bg-white poppins-font-section">
 
-        <!-- Client Screenshots -->
-        <section id="clients" class="py-20 bg-white">
-            <div class="container mx-auto px-6 max-w-5xl">
-                <h2 class="text-3xl md:text-4xl text-center text-gray-900 mb-4" data-bn-content="c_proj_page_title">Client Projects</h2>
-                <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto" data-bn-content="c_proj_page_desc">A look at websites and digital products we have shipped for businesses across Southern New Mexico.</p>
-
-                <div class="relative" x-data="{
-                    slides: [
-                        { src: '../../ui/img/src1.png', alt: 'Sourcere AI website' },
-                        { src: '../../ui/img/src2.png', alt: 'Forge by Blacnova website' },
-                        { src: '../../ui/img/src3.png', alt: 'FARMesilla website' },
-                        { src: '../../ui/img/src4.png', alt: 'Client project screenshot' },
-                        { src: '../../ui/img/src5.png', alt: 'Client project screenshot' },
-                        { src: '../../ui/img/src6.png', alt: 'Client project screenshot' }
-                    ],
-                    i: 0,
-                    touchX: null,
-                    prev() { this.i = (this.i - 1 + this.slides.length) % this.slides.length },
-                    next() { this.i = (this.i + 1) % this.slides.length },
-                    onTouchStart(e) { this.touchX = e.changedTouches[0].screenX },
-                    onTouchEnd(e) {
-                        if (this.touchX === null) return;
-                        const dx = e.changedTouches[0].screenX - this.touchX;
-                        if (Math.abs(dx) > 40) dx < 0 ? this.next() : this.prev();
-                        this.touchX = null;
-                    }
-                }">
-                    <div class="overflow-hidden rounded-2xl border border-gray-200 bg-gray-50"
-                         @touchstart.passive="onTouchStart($event)"
-                         @touchend.passive="onTouchEnd($event)">
-                        <img :src="slides[i].src" :alt="slides[i].alt" class="w-full h-auto object-contain max-h-[70vh] mx-auto block" loading="lazy">
-                    </div>
-
-                    <button type="button" @click="prev()" aria-label="Previous project"
-                            class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 md:-translate-x-4 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white border border-gray-200 text-gray-800 flex items-center justify-center shadow-sm hover:border-[#d4611c] hover:text-[#d4611c] transition-colors">
-                        <i class="ph ph-caret-left text-xl"></i>
-                    </button>
-                    <button type="button" @click="next()" aria-label="Next project"
-                            class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 md:translate-x-4 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white border border-gray-200 text-gray-800 flex items-center justify-center shadow-sm hover:border-[#d4611c] hover:text-[#d4611c] transition-colors">
-                        <i class="ph ph-caret-right text-xl"></i>
-                    </button>
-
-                    <div class="flex justify-center gap-2 mt-6">
-                        <template x-for="(slide, idx) in slides" :key="idx">
-                            <button type="button" @click="i = idx" :aria-label="'Go to slide ' + (idx + 1)"
-                                    class="w-2 h-2 rounded-full transition-colors"
-                                    :class="i === idx ? 'bg-[#d4611c]' : 'bg-gray-300'"></button>
-                        </template>
-                    </div>
+        <section id="clients" class="py-16 md:py-20 bg-white">
+            <div class="container mx-auto px-6 max-w-6xl">
+                <div class="text-center mb-12">
+                    <span class="inline-block mb-3 text-sm font-semibold tracking-wider text-[#d4611c] uppercase">Client work</span>
+                    <h1 class="text-3xl md:text-5xl text-gray-900 mb-4">Websites we shipped</h1>
+                    <p class="text-gray-600 max-w-2xl mx-auto">Real businesses in Las Cruces, Mesilla, and El Paso. No internal tools, no mockups. These are live sites.</p>
                 </div>
+
+                <div class="bn-work-grid">
+                    <article class="bn-work-card">
+                        <img src="../../ui/img/clients/butterfield.jpg" alt="Butterfield Trail Golf Club homepage" loading="lazy">
+                        <div class="bn-work-card__body">
+                            <h2 class="bn-work-card__name">Butterfield Trail Golf Club</h2>
+                            <p class="bn-work-card__meta">El Paso golf club. Tee times, dining, events, and a course that actually looks like the course.</p>
+                        </div>
+                    </article>
+                    <article class="bn-work-card">
+                        <img src="../../ui/img/clients/apex.jpg" alt="Apex Auto homepage" loading="lazy">
+                        <div class="bn-work-card__body">
+                            <h2 class="bn-work-card__name">Apex Auto</h2>
+                            <p class="bn-work-card__meta">PPF, tint, and performance parts for installers. Catalog, dealer portal, and a homepage that sells the film.</p>
+                        </div>
+                    </article>
+                    <article class="bn-work-card">
+                        <img src="../../ui/img/clients/minnies.jpg" alt="Minnies Flowers and Gifts homepage" loading="lazy">
+                        <div class="bn-work-card__body">
+                            <h2 class="bn-work-card__name">Minnies Flowers &amp; Gifts</h2>
+                            <p class="bn-work-card__meta">Las Cruces and Mesilla florals. Weddings, sympathy, delivery, and a storefront that feels like the shop.</p>
+                        </div>
+                    </article>
+                    <article class="bn-work-card">
+                        <img src="../../ui/img/clients/farmesilla.jpg" alt="FARMesilla homepage" loading="lazy">
+                        <div class="bn-work-card__body">
+                            <h2 class="bn-work-card__name">FARMesilla</h2>
+                            <p class="bn-work-card__meta">Farm-to-table in Mesilla. Menus, catering, and a hero that looks like walking in the door.</p>
+                        </div>
+                    </article>
+                    <article class="bn-work-card">
+                        <img src="../../ui/img/clients/sombrero.jpg" alt="El Sombrero Express homepage" loading="lazy">
+                        <div class="bn-work-card__body">
+                            <h2 class="bn-work-card__name">El Sombrero Express</h2>
+                            <p class="bn-work-card__meta">To-go and catering. Online ordering up front, directions one tap away.</p>
+                        </div>
+                    </article>
+                    <article class="bn-work-card">
+                        <img src="../../ui/img/clients/chios.jpg" alt="Chios Cleanings homepage" loading="lazy">
+                        <div class="bn-work-card__body">
+                            <h2 class="bn-work-card__name">Chios Cleanings</h2>
+                            <p class="bn-work-card__meta">Locally owned cleaning in Las Cruces. Quotes, services, and the team on the homepage.</p>
+                        </div>
+                    </article>
+                    <article class="bn-work-card">
+                        <img src="../../ui/img/clients/ajs.jpg" alt="AJ's Repair homepage" loading="lazy">
+                        <div class="bn-work-card__body">
+                            <h2 class="bn-work-card__name">AJ's Repair</h2>
+                            <p class="bn-work-card__meta">Appliance repair for the Mesilla Valley. Phone in the hero, service area on the next scroll.</p>
+                        </div>
+                    </article>
+                    <article class="bn-work-card">
+                        <img src="../../ui/img/clients/luz.jpg" alt="Luz de Luna shop page" loading="lazy">
+                        <div class="bn-work-card__body">
+                            <h2 class="bn-work-card__name">Luz de Luna</h2>
+                            <p class="bn-work-card__meta">Hand-poured candles from historic Mesilla. A small shop with a product grid that stays out of the way.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="games" class="bn-game-block py-16 md:py-24">
+            <div class="container mx-auto px-6 max-w-6xl">
+                <div class="max-w-3xl mb-12 md:mb-16">
+                    <span class="bn-game-kicker">Game development</span>
+                    <h2 class="text-3xl md:text-5xl text-white mb-5">Built in the hours after client work</h2>
+                    <p class="bn-game-copy">Websites pay the lights. Games are where I push the stack until it breaks, then put it back together. Lua, Love2D, and a lot of late nights in Las Cruces.</p>
+                </div>
+
+                <article class="mb-20 md:mb-28">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start mb-8">
+                        <div class="lg:col-span-7">
+                            <img src="../../ui/img/games/pixelvida-night.jpg" alt="Pixelvida at night with rain over a generated city skyline" class="bn-game-shot">
+                        </div>
+                        <div class="lg:col-span-5">
+                            <span class="bn-game-kicker">Pixelvida</span>
+                            <h3 class="text-2xl md:text-3xl text-white mb-4">First game. First time with Lua. First time with no safety net.</h3>
+                            <div class="bn-game-copy">
+                                <p>Pixelvida is my first game. A 2D survival sandbox built completely from scratch in Lua with Love2D. It was a crash course in game loop architecture and keeping a world in memory without cheating.</p>
+                                <p>The engine runs a day and night cycle, weather, mob AI for fighting off zombies, a farming system for crops, and crafting for structures like campfires and chests. There is a hoverboard for getting around. The world is generated at runtime.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bn-game-shot-grid mb-8">
+                        <img src="../../ui/img/games/pixelvida-1.jpg" alt="Pixelvida daytime quests and city skyline" class="bn-game-shot" loading="lazy">
+                        <img src="../../ui/img/games/pixelvida-3.jpg" alt="Pixelvida NPC dialogue with a farmer at dusk" class="bn-game-shot" loading="lazy">
+                        <img src="../../ui/img/games/pixelvida-4.jpg" alt="Pixelvida chest inventory over the city" class="bn-game-shot" loading="lazy">
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                        <div class="lg:col-span-5 order-2 lg:order-1">
+                            <h3 class="text-2xl text-white mb-4">Zero image files</h3>
+                            <div class="bn-game-copy">
+                                <p>For a stretch of months I poured spare time into Pixelvida, the first project that felt like mine. Love2D is amazing for this.</p>
+                                <p>The strangest part is also the point. There are no sprite sheets to lean on. Every character, item, and piece of terrain is built by rendering raw geometric primitives (rectangles, circles) onto canvases, then treating those canvases as pixel-art textures.</p>
+                                <p>Pixelvida was an experiment first and a game second. I wanted to step outside the comfort of shipping websites. Learning Lua and procedural generation without an asset pack forced better thinking about performance, memory, and architecture. Steep curve. Watching those shapes start walking made it worth it.</p>
+                                <p class="mt-4"><a class="bn-game-link" href="https://github.com/nicholasxdavis/pixelvida" target="_blank" rel="noopener noreferrer">github.com/nicholasxdavis/pixelvida</a></p>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-7 order-1 lg:order-2">
+                            <div class="bn-gif-frame">
+                                <img src="../../ui/img/games/pixelvida-char.gif" alt="Pixelvida character assembled and animated from geometric primitives">
+                            </div>
+                            <p class="text-sm text-gray-500 mt-3 text-center">Animating a character from primitives, no sprite file.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="mb-20 md:mb-28">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start mb-8">
+                        <div class="lg:col-span-5">
+                            <span class="bn-game-kicker">Pixelvida Community</span>
+                            <h3 class="text-2xl md:text-3xl text-white mb-4">Same ideas, top-down, with other people in the town.</h3>
+                            <div class="bn-game-copy">
+                                <p>The Love2D build taught the systems. Pixelvida Community is the larger world: a top-down town with an armory, farming plots, a day clock, campfires, and zombies that do not wait for you to be ready.</p>
+                                <p>It is still a learning lab. Inventory, shops, a mystery armory, crate keys, and a map that has to feel like a place instead of a grid. The screenshots below are the game view, not the editor.</p>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-7">
+                            <img src="../../ui/img/games/community-1.jpg" alt="Pixelvida Community town plaza and armory" class="bn-game-shot">
+                        </div>
+                    </div>
+                    <div class="bn-game-shot-grid">
+                        <img src="../../ui/img/games/community-2.jpg" alt="Pixelvida Community farming and shoreline" class="bn-game-shot" loading="lazy">
+                        <img src="../../ui/img/games/community-3.jpg" alt="Pixelvida Community combat near water" class="bn-game-shot" loading="lazy">
+                        <img src="../../ui/img/games/community-armory.jpg" alt="Pixelvida Community armory shop" class="bn-game-shot" loading="lazy">
+                    </div>
+                </article>
+
+                <article class="mb-20 md:mb-28">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+                        <div class="lg:col-span-5">
+                            <span class="bn-game-kicker">Block Blast</span>
+                            <h3 class="text-2xl md:text-3xl text-white mb-4">A Love2D puzzle you can play in the browser.</h3>
+                            <div class="bn-game-copy">
+                                <p>Block Blast is a packing puzzle: drop pieces, clear lines, chase a score. Built in Love2D and shipped to the web so it runs without installing anything.</p>
+                                <p>There is a shop for row blasts, column blasts, color wipes, and a few extras. It is smaller than Pixelvida on purpose. Finish a loop, put it in front of people, learn what feels cheap.</p>
+                                <p class="mt-4">
+                                    <a class="bn-game-link" href="https://nicholasxdavis.github.io/block-blast-web/" target="_blank" rel="noopener noreferrer">Play Block Blast</a>
+                                    <span class="text-gray-500"> · </span>
+                                    <a class="bn-game-link" href="https://github.com/nicholasxdavis/block-blast-web" target="_blank" rel="noopener noreferrer">Source</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-7">
+                            <div class="bn-game-shot-grid bn-game-shot-grid--two">
+                                <img src="../../ui/img/games/blockblast-1.jpg" alt="Block Blast gameplay on a dark board" class="bn-game-shot" loading="lazy">
+                                <img src="../../ui/img/games/blockblast-2.jpg" alt="Block Blast in-game shop" class="bn-game-shot" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article>
+                    <span class="bn-game-kicker">Pixel Prototypes</span>
+                    <h3 class="text-2xl md:text-3xl text-white mb-4">A Lua lab for the pieces underneath the games.</h3>
+                    <div class="bn-game-copy max-w-3xl">
+                        <p>Pixel Prototypes is not a game you boot up. It is the workshop: weapons, ammo, shields, consumables, character and armor, world pieces. Small Love2D programs that prove a system before it lands in Pixelvida.</p>
+                        <p>That is how the hoverboard, the chest, and the zombie AI got honest. Break the part in isolation, then drop it into the world.</p>
+                        <p class="mt-4"><a class="bn-game-link" href="https://github.com/nicholasxdavis/pixel-prototypes" target="_blank" rel="noopener noreferrer">github.com/nicholasxdavis/pixel-prototypes</a></p>
+                    </div>
+                </article>
             </div>
         </section>
 
