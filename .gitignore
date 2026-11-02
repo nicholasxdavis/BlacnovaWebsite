@@ -1,0 +1,4 @@
+﻿node_modules/
+.development/lighthouse/
+.DS_Store
+Thumbs.db

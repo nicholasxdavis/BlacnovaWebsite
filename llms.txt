@@ -1,0 +1,36 @@
+# Blacnova Development
+
+> Website design, web development, and local SEO for Las Cruces and Mesilla Valley businesses.
+
+## Primary pages
+
+- [Home](https://www.blacnova.net/): Las Cruces web & business solutions
+- [Website Design Las Cruces](https://www.blacnova.net/las-cruces-web-design/): Local website design service page
+- [Web Development Las Cruces](https://www.blacnova.net/las-cruces-web-development/): Custom development service page
+- [SEO Las Cruces](https://www.blacnova.net/las-cruces-seo/): Local search optimization
+- [About](https://www.blacnova.net/pages/about/): Who we are
+- [Projects](https://www.blacnova.net/pages/projects/): Client work and case studies
+- [Start a Project](https://www.blacnova.net/pages/intake/): Project intake form
+- [Free Tools](https://www.blacnova.net/pages/tools/): Color, font, QR, SSL, and PFP tools
+
+## Blog
+
+- [Blacnova Blog](https://blog.blacnova.net/): Guides for Las Cruces & Mesilla businesses
+- [Website Design Las Cruces & Mesilla](https://blog.blacnova.net/blogs/website-design-las-cruces-mesilla/)
+- [Get Found Online](https://blog.blacnova.net/blogs/las-cruces-get-found-online/)
+
+## Business
+
+- Company: Blacnova Development
+- Site: https://www.blacnova.net
+- Blog: https://blog.blacnova.net
+- Email: nic@blacnova.net
+- Phone: (575) 270-1276
+- Location: Las Cruces, El Paso, and surrounding areas
+- Services: Website design, web development, SEO, client dashboards, Cloudflare-secured hosting
+
+## Crawl
+
+- Sitemap: https://www.blacnova.net/sitemap.xml
+- Robots: https://www.blacnova.net/robots.txt
+- IndexNow key: https://www.blacnova.net/46b6af37-9b5b-4e2d-aa49-f4fd87f3d164.txt
