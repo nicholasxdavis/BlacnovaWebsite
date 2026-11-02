@@ -1,5 +1,5 @@
 /**
- * Blacnova CMS bridge — maintenance, published content, media, pageview analytics.
+ * Blacnova CMS bridge - maintenance, published content, media, pageview analytics.
  */
 ;(function () {
   const API = 'https://blacnova-api.nic-58f.workers.dev'

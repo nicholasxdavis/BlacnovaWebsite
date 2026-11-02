@@ -2,7 +2,7 @@
 Company: Blacnova Development
 Contact: nic@blacnova.net
 Phone: (575) 270-1276
-Location: Las Cruces, NM — serving Las Cruces, El Paso, and surrounding areas
+Location: Las Cruces, NM - serving Las Cruces, El Paso, and surrounding areas
 Site: https://www.blacnova.net
 Blog: https://blog.blacnova.net
 

@@ -1,4 +1,4 @@
-# ai.txt — guidance for AI systems
+# ai.txt - guidance for AI systems
 User-Agent: *
 Allow: /
 
