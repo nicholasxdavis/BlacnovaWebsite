@@ -50,7 +50,7 @@ h1, h2, h3, h4, strong {
 .site-header {
   position: sticky;
   top: 0;
-  z-index: 50;
+  z-index: 40;
   background: var(--bn-black);
   border-bottom: 1px solid var(--bn-line);
 }
@@ -71,7 +71,7 @@ h1, h2, h3, h4, strong {
 }
 
 .site-nav {
-  display: none;
+  display: none !important;
   align-items: center;
   gap: 1.35rem;
   flex-wrap: wrap;
@@ -79,7 +79,7 @@ h1, h2, h3, h4, strong {
 }
 
 @media (min-width: 768px) {
-  .site-nav { display: flex; }
+  .site-nav { display: flex !important; }
 }
 
 .site-nav a {
@@ -108,7 +108,7 @@ h1, h2, h3, h4, strong {
 .site-nav a[aria-current="page"] { color: #fff; }
 
 .menu-btn {
-  display: inline-flex;
+  display: inline-flex !important;
   align-items: center;
   justify-content: center;
   margin: 0;
@@ -120,7 +120,7 @@ h1, h2, h3, h4, strong {
 }
 
 @media (min-width: 768px) {
-  .menu-btn { display: none; }
+  .menu-btn { display: none !important; }
 }
 
 .menu-btn svg {
@@ -128,37 +128,38 @@ h1, h2, h3, h4, strong {
   height: 2rem;
 }
 
-.menu-overlay {
+.menu-overlay,
+.mobile-menu {
+  display: none;
+}
+
+.menu-overlay[hidden],
+.mobile-menu[hidden] {
+  display: none !important;
+}
+
+.menu-overlay.is-open {
+  display: block;
   position: fixed;
   inset: 0;
-  z-index: 40;
+  z-index: 60;
   background: rgba(0, 0, 0, 0.7);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.2s ease;
 }
 
-.menu-overlay.open {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.mobile-menu {
+.mobile-menu.is-open {
+  display: block;
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
-  z-index: 50;
+  z-index: 70;
   width: min(16rem, 85vw);
   padding: 1.5rem;
   background: var(--bn-black);
   border-left: 1px solid var(--bn-line);
-  transform: translateX(100%);
-  transition: transform 0.2s ease;
   overflow-y: auto;
+  box-shadow: -12px 0 40px rgba(0, 0, 0, 0.45);
 }
-
-.mobile-menu.open { transform: translateX(0); }
 
 .mobile-menu__top {
   display: flex;
@@ -190,13 +191,13 @@ h1, h2, h3, h4, strong {
 }
 
 .mobile-menu nav a {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.9) !important;
   font-size: 1.15rem;
 }
 
 .mobile-menu nav a:hover,
 .mobile-menu nav a[aria-current="page"] {
-  color: #fff;
+  color: #fff !important;
   opacity: 1;
 }
 

@@ -6,24 +6,31 @@
   if (!openBtn || !closeBtn || !menu || !overlay) return;
 
   const openMenu = () => {
-    menu.classList.add('open');
-    overlay.classList.add('open');
+    menu.classList.add('is-open');
+    overlay.classList.add('is-open');
+    menu.removeAttribute('hidden');
+    overlay.removeAttribute('hidden');
     document.body.style.overflow = 'hidden';
     openBtn.setAttribute('aria-expanded', 'true');
   };
 
   const closeMenu = () => {
-    menu.classList.remove('open');
-    overlay.classList.remove('open');
+    menu.classList.remove('is-open');
+    overlay.classList.remove('is-open');
+    menu.setAttribute('hidden', '');
+    overlay.setAttribute('hidden', '');
     document.body.style.overflow = '';
     openBtn.setAttribute('aria-expanded', 'false');
   };
+
+  // Start closed even if markup omitted hidden
+  closeMenu();
 
   openBtn.addEventListener('click', openMenu);
   closeBtn.addEventListener('click', closeMenu);
   overlay.addEventListener('click', closeMenu);
   menu.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && menu.classList.contains('open')) closeMenu();
+    if (e.key === 'Escape' && menu.classList.contains('is-open')) closeMenu();
   });
 })();

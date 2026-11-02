@@ -29,7 +29,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/ui/css/money.css">
+  <link rel="stylesheet" href="/ui/css/money.css?v=3">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -108,8 +108,8 @@
       </button>
     </div>
   </header>
-  <div id="menu-overlay" class="menu-overlay"></div>
-  <div id="mobile-menu" class="mobile-menu" role="dialog" aria-modal="true" aria-label="Menu">
+  <div id="menu-overlay" class="menu-overlay" hidden></div>
+  <div id="mobile-menu" class="mobile-menu" hidden role="dialog" aria-modal="true" aria-label="Menu">
     <div class="mobile-menu__top">
       <button id="close-menu-button" class="mobile-menu__close" type="button" aria-label="Close menu">
         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
@@ -218,6 +218,6 @@
     </div>
   </footer>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-  <script src="/ui/js/money-nav.js"></script>
+  <script src="/ui/js/money-nav.js?v=3"></script>
 </body>
 </html>
