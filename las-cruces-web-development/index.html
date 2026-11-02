@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Web Development in Las Cruces, NM | Blacnova Development</title>
-  <meta name="description" content="Custom web development for Las Cruces businesses: fast sites, client dashboards, APIs, e-commerce, and Cloudflare-secured hosting — built locally in the Mesilla Valley.">
+  <meta name="description" content="Custom web development for Las Cruces businesses: fast sites, client dashboards, APIs, e-commerce, and Cloudflare-secured hosting — built locally for Las Cruces, El Paso, and surrounding areas.">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="author" content="Blacnova Development">
   <meta name="geo.region" content="US-NM">
   <meta name="geo.placename" content="Las Cruces">
   <meta name="geo.position" content="32.3199;-106.7637">
   <meta name="ICBM" content="32.3199, -106.7637">
-  <meta name="theme-color" content="#1A1A1A">
+  <meta name="theme-color" content="#000000">
   <link rel="canonical" href="https://www.blacnova.net/las-cruces-web-development/">
   <link rel="manifest" href="/site.webmanifest">
   <meta property="og:type" content="website">
@@ -28,34 +28,8 @@
   <link rel="icon" href="/ui/img/bn.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root { --bg:#0b0b0b; --ink:#f4f4f4; --muted:#b7b7b7; --line:#2a2a2a; --accent:#f97316; }
-    * { box-sizing: border-box; }
-    body { margin:0; font-family:Poppins,system-ui,sans-serif; background:radial-gradient(1200px 600px at 90% -10%,#101820 0%,var(--bg) 45%),var(--bg); color:var(--ink); line-height:1.65; }
-    a { color:var(--accent); text-decoration:none; }
-    a:hover { text-decoration:underline; }
-    .wrap { width:min(920px,92vw); margin:0 auto; padding:2.5rem 0 4rem; }
-    header { display:flex; justify-content:space-between; align-items:center; gap:1rem; padding:1.25rem 0 2rem; border-bottom:1px solid var(--line); }
-    header img { height:48px; width:auto; }
-    nav { display:flex; gap:1rem; flex-wrap:wrap; font-size:.9rem; }
-    nav a { color:var(--ink); }
-    h1 { font-size:clamp(2rem,5vw,3.2rem); line-height:1.15; margin:2rem 0 1rem; letter-spacing:-.02em; }
-    .lede { font-size:1.125rem; color:var(--muted); max-width:42rem; }
-    .cta { display:inline-flex; gap:.75rem; flex-wrap:wrap; margin:1.75rem 0 2.5rem; }
-    .btn { display:inline-block; padding:.9rem 1.25rem; border-radius:999px; font-weight:600; text-decoration:none !important; }
-    .btn-primary { background:var(--accent); color:#111; }
-    .btn-ghost { border:1px solid var(--line); color:var(--ink); }
-    section { margin:2.75rem 0; padding-top:1rem; border-top:1px solid var(--line); }
-    h2 { font-size:1.5rem; margin:0 0 .75rem; }
-    ul { padding-left:1.2rem; color:var(--muted); }
-    li { margin:.4rem 0; }
-    .grid { display:grid; gap:1rem; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); margin-top:1rem; }
-    .card { border:1px solid var(--line); border-radius:16px; padding:1.1rem 1.2rem; background:#121212; }
-    .card h3 { margin:.2rem 0 .4rem; font-size:1.05rem; }
-    .card p { margin:0; color:var(--muted); font-size:.95rem; }
-    footer { margin-top:3rem; padding-top:1.5rem; border-top:1px solid var(--line); color:var(--muted); font-size:.9rem; }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/ui/css/money.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -73,10 +47,14 @@
         "serviceType": "Web development",
         "provider": { "@id": "https://www.blacnova.net/#business" },
         "areaServed": [
-          { "@type": "City", "name": "Las Cruces" }, { "@type": "City", "name": "El Paso" }, { "@type": "City", "name": "Mesilla" }, { "@type": "AdministrativeArea", "name": "Doña Ana County" }, { "@type": "Place", "name": "Surrounding areas" }
+          { "@type": "City", "name": "Las Cruces" },
+          { "@type": "City", "name": "El Paso" },
+          { "@type": "City", "name": "Mesilla" },
+          { "@type": "AdministrativeArea", "name": "Doña Ana County" },
+          { "@type": "Place", "name": "Surrounding areas" }
         ],
         "url": "https://www.blacnova.net/las-cruces-web-development/",
-        "description": "Custom web development, integrations, and secure hosting for Las Cruces businesses."
+        "description": "Custom web development, integrations, and secure hosting for Las Cruces, El Paso, and surrounding-area businesses."
       },
       {
         "@type": "FAQPage",
@@ -112,57 +90,112 @@
   </script>
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <a href="/" aria-label="Blacnova Development home"><img src="/ui/img/logo_white.png" alt="Blacnova Development"></a>
-      <nav>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="/" aria-label="Blacnova Development home">
+        <img src="/ui/img/logo_white.png" alt="Blacnova Development" width="180" height="72">
+      </a>
+      <nav class="site-nav" aria-label="Primary">
         <a href="/las-cruces-web-design/">Design</a>
+        <a href="/las-cruces-web-development/" aria-current="page">Development</a>
         <a href="/las-cruces-seo/">SEO</a>
         <a href="/pages/projects/">Projects</a>
         <a href="https://blog.blacnova.net/">Blog</a>
+        <a href="/pages/intake/">Contact</a>
       </nav>
-    </header>
-
-    <h1>Web development in Las Cruces — custom, fast, and owned by you</h1>
-    <p class="lede">From brochure sites to client portals and integrations, Blacnova builds software-backed websites for Mesilla Valley businesses that need reliability — not another drag-and-drop trap.</p>
-    <div class="cta">
-      <a class="btn btn-primary" href="/pages/intake/">Request a build quote</a>
-      <a class="btn btn-ghost" href="https://blog.blacnova.net/blogs/blacnova-client-dashboard/">See the client dashboard</a>
     </div>
+  </header>
 
-    <section>
-      <h2>Development services</h2>
-      <div class="grid">
-        <article class="card"><h3>Custom websites</h3><p>Hand-built pages optimized for speed, accessibility, and local search.</p></article>
-        <article class="card"><h3>Client dashboards</h3><p>Update content and media without waiting on a developer for every tweak.</p></article>
-        <article class="card"><h3>Integrations</h3><p>Forms, CRMs, quotes, bookings, payments, and internal tools.</p></article>
-        <article class="card"><h3>Secure hosting</h3><p>Cloudflare-forward patterns for performance, SSL, and abuse protection.</p></article>
+  <main>
+    <section class="hero">
+      <p class="eyebrow">Web development · Las Cruces</p>
+      <h1>Custom web development — fast, owned by you</h1>
+      <p class="lede">From brochure sites to client portals and integrations, Blacnova builds software-backed websites for Las Cruces, El Paso, and surrounding businesses that need reliability — not another drag-and-drop trap.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="/pages/intake/">Request a build quote</a>
+        <a class="btn btn-ghost" href="https://blog.blacnova.net/blogs/blacnova-client-dashboard/">Client dashboard</a>
       </div>
     </section>
 
-    <section>
-      <h2>Why local businesses choose custom development</h2>
-      <ul>
-        <li>No bloated page builders slowing Core Web Vitals</li>
-        <li>Clean code you can actually maintain and rank with</li>
-        <li>Features that match how your Las Cruces business operates</li>
-        <li>Direct communication with the people building the product</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>FAQ</h2>
-      <div class="grid">
-        <article class="card"><h3>What can you build?</h3><p>Sites, portals, e-commerce, APIs, and secure deployments for local teams.</p></article>
-        <article class="card"><h3>Can you replace WordPress/Wix?</h3><p>Yes — migrations to faster custom stacks are common.</p></article>
-        <article class="card"><h3>Do clients get a dashboard?</h3><p>Many projects include Blacnova Client Dashboard access.</p></article>
+    <section class="band band--light">
+      <div class="band__inner">
+        <h2>Development services</h2>
+        <p class="section-intro">Practical builds that match how your business actually runs — not a pile of plugins.</p>
+        <div class="feature-grid">
+          <article class="feature">
+            <h3>Custom websites</h3>
+            <p>Hand-built pages optimized for speed, accessibility, and local search.</p>
+          </article>
+          <article class="feature">
+            <h3>Client dashboards</h3>
+            <p>Update content and media without waiting on a developer for every tweak.</p>
+          </article>
+          <article class="feature">
+            <h3>Integrations</h3>
+            <p>Forms, CRMs, quotes, bookings, payments, and internal tools.</p>
+          </article>
+          <article class="feature">
+            <h3>Secure hosting</h3>
+            <p>Cloudflare-forward patterns for performance, SSL, and abuse protection.</p>
+          </article>
+        </div>
       </div>
     </section>
 
-    <footer>
-      <p><strong>Blacnova Development</strong> · Las Cruces, El Paso &amp; surrounding areas · <a href="tel:+15752701276">(575) 270-1276</a> · <a href="mailto:nic@blacnova.net">nic@blacnova.net</a></p>
-      <p><a href="/">Home</a> · <a href="/las-cruces-web-design/">Web Design</a> · <a href="/las-cruces-seo/">Local SEO</a> · <a href="/pages/legal/">Legal</a></p>
-    </footer>
-  </div>
+    <section class="band band--dark">
+      <div class="band__inner">
+        <h2>Why local businesses choose custom development</h2>
+        <p class="section-intro">A scoped build from people you can call beats a national template farm every time.</p>
+        <ul class="checklist">
+          <li>No bloated page builders slowing Core Web Vitals</li>
+          <li>Clean code you can actually maintain and rank with</li>
+          <li>Features that match how your Las Cruces or El Paso business operates</li>
+          <li>Direct communication with the people building the product</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="band band--light">
+      <div class="band__inner">
+        <h2>FAQ</h2>
+        <p class="section-intro">Common questions before kickoff.</p>
+        <div class="faq-grid">
+          <article class="faq-item">
+            <h3>What can you build?</h3>
+            <p>Sites, portals, e-commerce, APIs, and secure deployments for local teams.</p>
+          </article>
+          <article class="faq-item">
+            <h3>Can you replace WordPress/Wix?</h3>
+            <p>Yes — migrations to faster custom stacks are common.</p>
+          </article>
+          <article class="faq-item">
+            <h3>Do clients get a dashboard?</h3>
+            <p>Many projects include Blacnova Client Dashboard access.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <img class="site-footer__mark" src="/ui/img/bn.png" alt="Blacnova Development" width="64" height="64">
+      <p>Website design &amp; development · Las Cruces, El Paso &amp; surrounding areas</p>
+      <p>
+        <a href="tel:+15752701276">(575) 270-1276</a>
+        ·
+        <a href="mailto:nic@blacnova.net">nic@blacnova.net</a>
+      </p>
+      <div class="site-footer__links">
+        <a href="/">Home</a>
+        <a href="/las-cruces-web-design/">Web Design</a>
+        <a href="/las-cruces-seo/">Local SEO</a>
+        <a href="/pages/projects/">Projects</a>
+        <a href="/pages/legal/">Legal</a>
+      </div>
+      <p class="site-footer__copy">&copy; <span id="year">2026</span> Blacnova Development. All rights reserved.</p>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
