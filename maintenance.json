@@ -1,7 +1,7 @@
 {
-  "enabled": false,
-  "title": "We'll be right back",
-  "message": "Blacnova Development is temporarily offline for improvements. Please check back soon or email nic@blacnova.net.",
+  "enabled": true,
+  "title": "We will be right back",
+  "message": "JV Wood Pallets is temporarily offline for improvements. Please check back soon.",
   "expectedReturn": "",
-  "updatedAt": "2026-08-06T00:18:08.601Z"
+  "updatedAt": "2026-11-03T18:41:27.562Z"
 }
