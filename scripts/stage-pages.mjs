@@ -36,6 +36,6 @@ await Promise.all([
   copyPublicAssets('img', /\.(?:png|jpe?g|gif|webp|svg)$/),
   copyPublicAssets('ui/img', /\.(?:png|jpe?g|gif|webp|svg)$/),
   copyPublicAssets('ui/js', /\.js$/),
-  copyPublicAssets('ui/css', /^(?:styles|money|tailwind)\.css$/),
+  copyPublicAssets('ui/css', /^(?:styles|money|tailwind|site-menu)\.css$/),
 ])
 console.log(target)

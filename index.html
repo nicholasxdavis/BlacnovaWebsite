@@ -161,6 +161,8 @@
       ]
     }
     </script>
+  <link rel="stylesheet" href="/ui/css/site-menu.css">
+  <script src="/ui/js/site-menu.js" defer></script>
 </head>
 
 
@@ -222,8 +224,8 @@
                     <a href="https://dashboard.blacnova.net/" class="btn-primary px-6 py-2 rounded-3xl transition-all font-medium hover:bg-opacity-90">Dashboard</a>
                 </div>
                 
-                <button id="mobile-menu-button" class="lg:hidden focus:outline-none text-white" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                <button id="mobile-menu-button" class="bn-menu-trigger" type="button" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
                 </button>
             </div>
         </div>
@@ -296,29 +298,6 @@
 
 })();
     </script>
-    <dialog id="mobile-menu" class="bn-home-menu" aria-label="Site menu">
-        <div class="flex justify-end mb-8">
-            <button id="close-menu-button" autofocus class="focus:outline-none text-white" aria-label="Close menu">
-                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-            </button>
-        </div>
-        
-        <nav class="flex flex-col space-y-6">
-            <details class="bn-home-menu__services">
-                <summary>Services</summary>
-                <a href="/las-cruces-web-design/">Web Design</a>
-                <a href="/las-cruces-web-development/">Web Development</a>
-                <a href="/las-cruces-seo/">Local SEO</a>
-                <a href="#services">All Services</a>
-            </details>
-            <a href="/pages/projects/" class="text-white text-xl">Client Projects</a>
-            <a href="pages/about/" class="nav-link text-white hover:text-gray-300 text-xl transition-colors">About Us</a>
-            <a href="https://blog.blacnova.net" target="_blank" rel="noopener noreferrer" class="nav-link text-white hover:text-gray-300 text-xl transition-colors">Blog</a>
-            <a href="#contact" class="nav-link text-white hover:text-gray-300 text-xl transition-colors">Contact Us</a>
-            <a href="#quote" class="nav-link text-white hover:text-gray-300 text-xl transition-colors">Get Quote</a>
-            <a href="https://dashboard.blacnova.net/" class="btn-primary px-6 py-3 rounded-3xl transition-all text-center mt-4 font-medium hover:bg-opacity-90">Dashboard</a>
-        </nav>
-    </dialog>
     
     <main class="mt-24">
 
@@ -677,7 +656,7 @@
         </div>
     </footer>
     
-    <script src="ui/js/ui.js"></script>
+    <script src="ui/js/ui.js?v=2"></script>
 
     <script src="ui/js/BN-Cta.js"></script>
     <script src="ui/js/BN-Contact.js"></script>

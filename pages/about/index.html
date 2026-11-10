@@ -80,6 +80,8 @@
       ] 
     }
     </script>
+  <link rel="stylesheet" href="/ui/css/site-menu.css">
+  <script src="/ui/js/site-menu.js" defer></script>
 </head>
 
 <body>
@@ -92,7 +94,7 @@
                     </a>
                 </div>
                 
-                                <nav class="hidden md:flex items-center absolute left-1/2 transform -translate-x-1/2">
+                                <nav class="hidden lg:flex items-center absolute left-1/2 transform -translate-x-1/2">
                     <div class="flex items-center gap-x-4 lg:gap-x-5">
                         <!-- Services Dropdown -->
                         <div class="relative group" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false">
@@ -129,12 +131,12 @@
                     </div>
                 </nav>
                 
-                <div class="hidden md:flex items-center">
+                <div class="hidden lg:flex items-center">
                     <a href="https://dashboard.blacnova.net/" class="btn-primary px-6 py-2 rounded-3xl transition-all font-medium hover:bg-opacity-90">Dashboard</a>
                 </div>
                 
-                <button id="mobile-menu-button" class="md:hidden focus:outline-none text-white" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                <button id="mobile-menu-button" class="bn-menu-trigger" type="button" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
                 </button>
             </div>
         </div>
@@ -207,56 +209,6 @@
 
 })();
     </script>
- <div id="mobile-menu" class="mobile-menu fixed inset-y-0 right-0 w-64 shadow-xl z-50 p-6 closed">
-        <div class="flex justify-end mb-8">
-            <button id="close-menu-button" class="focus:outline-none text-white" aria-label="Close menu">
-                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-            </button>
-        </div>
-        
-        <nav class="flex flex-col space-y-6">
-            <!-- Services Mobile Dropdown -->
-            <div class="mobile-dropdown">
-                <button class="mobile-dropdown-btn flex items-center justify-between w-full text-white hover:text-gray-300 text-xl transition-colors">
-                    <span>Our Services</span>
-                    <svg class="w-5 h-5 rotate-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                    </svg>
-                </button>
-                <div class="mobile-dropdown-content mt-2 ml-4">
-                    <!-- Development Services -->
-                    <div class="mb-4">
-                        <h4 class="font-medium text-gray-300 mb-2">Development</h4>
-                        <div class="space-y-2 ml-2">
-                            <a href="/#web-development" class="block py-1 text-gray-400 hover:text-white transition-colors">Web Development</a>
-                            <a href="/#e-commerce" class="block py-1 text-gray-400 hover:text-white transition-colors">E-Commerce</a>
-                            <a href="/#api-integration" class="block py-1 text-gray-400 hover:text-white transition-colors">API Integration</a>
-                            <a href="/#cloud-solutions" class="block py-1 text-gray-400 hover:text-white transition-colors">Cloud Solutions</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Growth Services -->
-                    <div class="mb-4">
-                        <h4 class="font-medium text-gray-300 mb-2">Growth</h4>
-                        <div class="space-y-2 ml-2">
-                            <a href="/#seo-optimization" class="block py-1 text-gray-400 hover:text-white transition-colors">SEO Optimization</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <a href="/pages/projects/" class="nav-link text-white hover:text-gray-300 transition-colors text-xl">Projects</a>
-
-            <a href="/pages/about/" class="nav-link text-white hover:text-gray-300 text-xl transition-colors">About Us</a>
-            <a href="https://blog.blacnova.net" target="_blank" rel="noopener noreferrer" class="nav-link text-white hover:text-gray-300 text-xl transition-colors">Blog</a>
-            <a href="/#contact" class="nav-link text-white hover:text-gray-300 text-xl transition-colors">Contact Us</a>
-            <a href="/#quote" class="nav-link text-white hover:text-gray-300 text-xl transition-colors">Get Quote</a>
-            <a href="https://dashboard.blacnova.net/" class="btn-primary px-6 py-3 rounded-3xl transition-all text-center mt-4 font-medium hover:bg-opacity-90">Dashboard</a>
-        </nav>
-    </div>
-    
-    <div id="menu-overlay" class="fixed inset-0 bg-black bg-opacity-70 z-40 hidden"></div>
-    
     <main class="mt-24 bg-white poppins-font-section">
 
         <!-- How We Work -->
@@ -392,7 +344,7 @@
         </div>
     </footer>
     
-    <script src="../../ui/js/ui.js"></script>
+    <script src="../../ui/js/ui.js?v=2"></script>
 
     <script src="../../ui/js/BN-Cta.js"></script>
     <script src="../../ui/js/BN-Contact.js"></script>
