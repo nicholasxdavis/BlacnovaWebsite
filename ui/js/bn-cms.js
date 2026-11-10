@@ -4,6 +4,16 @@
 ;(function () {
   const API = 'https://blacnova-api.nic-58f.workers.dev'
   const DOMAIN = 'www.blacnova.net'
+  const root = document.documentElement
+  const gate = document.createElement('style')
+  gate.textContent = `
+    html.bn-maintenance-pending { background: #0a0a0a; }
+    html.bn-maintenance-pending body { opacity: 0 !important; visibility: hidden !important; }
+    html.bn-maintenance-active { overflow: hidden; }
+    html.bn-maintenance-active body > :not(#bn-maintenance-overlay) { display: none !important; }
+  `
+  document.head.appendChild(gate)
+  root.classList.add('bn-maintenance-pending')
 
   function escapeHtml(str) {
     return String(str)
@@ -16,7 +26,7 @@
   function applyContent(blocks) {
     if (!Array.isArray(blocks)) return
     blocks.forEach(function (block) {
-      document.querySelectorAll('[data-bn-content="' + block.id + '"]').forEach(function (el) {
+      document.querySelectorAll('[data-bn-content="' + CSS.escape(block.id) + '"]').forEach(function (el) {
         if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') el.value = block.value
         else if (el.tagName === 'IMG') el.setAttribute('alt', block.value)
         else el.textContent = block.value
@@ -26,15 +36,21 @@
 
   function applyMedia(media) {
     if (!Array.isArray(media)) return
-    var byName = {}
+    var byName = Object.create(null)
     media.forEach(function (item) {
-      if (item && item.name && item.url) byName[item.name] = item.url
+      if (item && item.name && item.url) byName[item.name] = item
     })
     document.querySelectorAll('[data-bn-media]').forEach(function (el) {
       var key = el.getAttribute('data-bn-media')
-      if (!key || !byName[key]) return
-      if (el.tagName === 'IMG') el.setAttribute('src', byName[key])
-      else el.style.backgroundImage = 'url("' + byName[key] + '")'
+      const item = byName[key]
+      if (!item) return
+      if (el.tagName === 'IMG') {
+        // The media library still lists the original URL for the bundled default.
+        if (!item.uploaded && item.url === el.getAttribute('data-bn-default-media')) return
+        el.removeAttribute('srcset')
+        el.removeAttribute('sizes')
+        el.setAttribute('src', item.url)
+      } else el.style.backgroundImage = 'url("' + item.url + '")'
     })
     // Patch Alpine carousel slides that reference ui/img filenames
     if (typeof Alpine !== 'undefined' && typeof Alpine.$data === 'function') {
@@ -45,7 +61,7 @@
           data.slides.forEach(function (slide) {
             if (!slide || !slide.src) return
             var name = String(slide.src).split('/').pop().split('?')[0]
-            if (byName[name]) slide.src = byName[name]
+            if (byName[name]) slide.src = byName[name].url
           })
         } catch (e) {}
       })
@@ -60,7 +76,7 @@
     overlay.id = 'bn-maintenance-overlay'
     overlay.setAttribute(
       'style',
-      'position:fixed;inset:0;z-index:2147483646;background:#0a0a0a;color:#fff;display:flex;align-items:center;justify-content:center;padding:24px;font-family:Poppins,sans-serif;text-align:center;',
+      'position:fixed;inset:0;z-index:2147483646;background:#0a0a0a;color:#fff;display:grid;place-items:center;overflow:auto;padding:24px;font-family:Poppins,sans-serif;text-align:center;',
     )
     overlay.innerHTML =
       '<div style="max-width:480px">' +
@@ -76,11 +92,8 @@
           '</p>'
         : '') +
       '</div>'
-    document.documentElement.appendChild(overlay)
-    try {
-      document.documentElement.style.overflow = 'hidden'
-      document.body.style.overflow = 'hidden'
-    } catch (e) {}
+    document.body.appendChild(overlay)
+    root.classList.add('bn-maintenance-active')
   }
 
   function trackPageview() {
@@ -106,28 +119,42 @@
     } catch (e) {}
   }
 
+  async function fetchJson(url, timeout) {
+    const controller = new AbortController()
+    const timer = setTimeout(() => controller.abort(), timeout)
+    try {
+      const response = await fetch(url, {
+        cache: 'no-store',
+        signal: controller.signal,
+      })
+      return response.ok ? await response.json() : null
+    } catch {
+      return null
+    } finally {
+      clearTimeout(timer)
+    }
+  }
+
+  async function getSite() {
+    const site = await fetchJson(API + '/v1/public/' + encodeURIComponent(DOMAIN) + '/site', 2500)
+    if (typeof site?.maintenance?.enabled === 'boolean') return site
+    return { maintenance: await fetchJson('/maintenance.json', 1200) }
+  }
+
+  const siteRequest = getSite()
+
   async function load() {
     try {
-      var res = await fetch(API + '/v1/public/' + encodeURIComponent(DOMAIN) + '/site', {
-        cache: 'no-store',
-      })
-      if (res.ok) {
-        var data = await res.json()
-        showMaintenance(data.maintenance)
-        if (!(data.maintenance && data.maintenance.enabled)) {
-          applyContent(data.content)
-          applyMedia(data.media)
-        }
-      } else {
-        var fallback = await fetch('/maintenance.json', { cache: 'no-store' }).catch(function () {
-          return null
-        })
-        if (fallback && fallback.ok) showMaintenance(await fallback.json())
+      const data = await siteRequest
+      if (data.maintenance?.enabled === true) showMaintenance(data.maintenance)
+      else {
+        applyContent(data.content)
+        applyMedia(data.media)
       }
-    } catch (err) {
-      console.warn('[bn-cms] failed to load content', err)
+    } finally {
+      root.classList.remove('bn-maintenance-pending')
+      trackPageview()
     }
-    trackPageview()
   }
 
   window.BlacnovaCMS = {

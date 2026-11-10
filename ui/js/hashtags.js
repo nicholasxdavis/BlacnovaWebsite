@@ -689,7 +689,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                         </svg>
                     </button>
-                    <h1 id="bn-meeting-form-title">Schedule Meeting</h1>
+                    <h2 id="bn-meeting-form-title">Schedule Meeting</h2>
                     <div id="bn-meeting-inner-box">
                         <p style="text-align: center; margin-top: 0; margin-bottom: 1.5rem; color: #4b5563;">Fill out this form to schedule a meeting with us.</p>
                         <form id="bn-meeting-form" action="https://formspree.io/f/mldoylwq" method="POST" style="flex-grow: 1; display: flex; flex-direction: column;">

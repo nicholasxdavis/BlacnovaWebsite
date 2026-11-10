@@ -119,12 +119,17 @@ document.addEventListener('DOMContentLoaded', function () {
                 mobileMenu.classList.replace('closed', 'open');
                 menuOverlay.classList.remove('hidden');
                 document.body.style.overflow = 'hidden';
+                mobileMenuButton.setAttribute('aria-expanded', 'true');
+                closeMenuButton.focus();
             };
 
             const closeMenu = () => {
+                if (!mobileMenu.classList.contains('open')) return;
                 mobileMenu.classList.replace('open', 'closed');
                 menuOverlay.classList.add('hidden');
                 document.body.style.overflow = '';
+                mobileMenuButton.setAttribute('aria-expanded', 'false');
+                mobileMenuButton.focus();
                 
                 // Close all dropdowns when menu closes
                 document.querySelectorAll('.mobile-dropdown-content').forEach(content => {
@@ -136,11 +141,33 @@ document.addEventListener('DOMContentLoaded', function () {
                 });
             };
 
-            if (mobileMenuButton) mobileMenuButton.addEventListener('click', openMenu);
-            if (closeMenuButton) closeMenuButton.addEventListener('click', closeMenu);
-            if (menuOverlay) menuOverlay.addEventListener('click', closeMenu);
-
-            if (mobileMenu) {
+            if (mobileMenu instanceof HTMLDialogElement) {
+                const desktop = window.matchMedia('(min-width: 1024px)');
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.showModal();
+                    document.documentElement.classList.add('bn-home-menu-open');
+                    mobileMenuButton.setAttribute('aria-expanded', 'true');
+                });
+                const dismiss = () => mobileMenu.close();
+                closeMenuButton.addEventListener('click', dismiss);
+                mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', dismiss));
+                mobileMenu.addEventListener('close', () => {
+                    document.documentElement.classList.remove('bn-home-menu-open');
+                    mobileMenuButton.setAttribute('aria-expanded', 'false');
+                });
+                desktop.addEventListener('change', event => {
+                    if (event.matches && mobileMenu.open) dismiss();
+                });
+            } else if (mobileMenu && mobileMenuButton && closeMenuButton && menuOverlay) {
+                mobileMenuButton.addEventListener('click', openMenu);
+                closeMenuButton.addEventListener('click', closeMenu);
+                menuOverlay.addEventListener('click', closeMenu);
+                document.addEventListener('keydown', event => {
+                    if (event.key === 'Escape') closeMenu();
+                });
+                window.matchMedia('(min-width: 768px)').addEventListener('change', event => {
+                    if (event.matches) closeMenu();
+                });
                 mobileMenu.querySelectorAll('a').forEach(link => {
                     link.addEventListener('click', closeMenu);
                 });

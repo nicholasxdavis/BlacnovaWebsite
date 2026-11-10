@@ -10,9 +10,10 @@
     </script>
 
     <meta charset="UTF-8">
+    <script src="/ui/js/bn-cms.js?v=2"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>About Us | Blacnova Development</title>
+    <title>About Blacnova Development | Las Cruces, NM</title>
     <meta name="description" content="Learn about Blacnova Development - crafting tailored digital solutions for modern businesses with sleek UI/UX and powerful backend logic.">
     <meta name="keywords" content="web development, digital solutions, UI/UX design, API integration, business growth">
     <link rel="canonical" href="https://www.blacnova.net/pages/about/">
@@ -36,46 +37,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.2/dist/full.css" rel="stylesheet" type="text/css" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" type="text/css" href="../../ui/css/styles.css">
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <link rel="stylesheet" href="/ui/css/tailwind.css">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.9/dist/cdn.min.js" defer></script>
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'bn-soft': '#FAF9EE',
-                        'bn-green': '#1A1A1a',
-                        'bn-white': '#EEEEEE',
-                        'bn-black': '#010101',
-                        'bn-dark': '#1A1A1A',
-                        forge: {
-                            50: '#fff7ed',
-                            100: '#ffedd5',
-                            200: '#fed7aa',
-                            300: '#fdba74',
-                            400: '#fb923c',
-                            500: '#f97316',
-                            600: '#ea580c',
-                            700: '#c2410c',
-                            800: '#9a3412',
-                            900: '#7c2d12',
-                        },
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        heading: ['inter', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
     
     <script type="application/ld+json">
     {
@@ -113,15 +80,6 @@
       ] 
     }
     </script>
-    <style>
-        .project-card {
-            @apply bg-white rounded-3xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300;
-        }
-        .value-card {
-            @apply bg-white p-6 rounded-3xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300;
-        }
-    </style>
-    <script src="../../ui/js/bn-cms.js"></script>
 </head>
 
 <body>
@@ -129,7 +87,7 @@
         <div class="container mx-auto px-4">
             <div class="header-content flex justify-between items-center h-24">
                 <div class="flex items-center">
-                    <a href="../../index.html" class="flex items-center">
+                    <a href="/" class="flex items-center">
                         <img src="../../ui/img/logo_white.png" alt="Blacnova Development Logo" class="logo h-20">
                     </a>
                 </div>
@@ -138,7 +96,7 @@
                     <div class="flex items-center gap-x-4 lg:gap-x-5">
                         <!-- Services Dropdown -->
                         <div class="relative group" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false">
-                            <a href="../../index.html#services" class="nav-link text-white hover:text-gray-300 transition-colors flex items-center text-sm whitespace-nowrap">
+                            <a href="/#services" class="nav-link text-white hover:text-gray-300 transition-colors flex items-center text-sm whitespace-nowrap">
                                 Our Services
                                 <svg class="w-3.5 h-3.5 ml-0.5 transition-transform duration-200" :class="{ 'rotate-180': open }" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -153,44 +111,21 @@
                                  x-transition:leave-end="opacity-0 translate-y-1"
                                  class="absolute left-1/2 z-50 mt-2 w-64 -translate-x-1/2 overflow-hidden rounded-xl border border-white/10 bg-[#0a0a0a] py-2 shadow-xl"
                                  @mouseenter="open = true" @mouseleave="open = false" style="display: none;">
-                                <a href="../../index.html#web-development" class="block px-4 py-2.5 text-sm text-gray-300 transition-colors hover:bg-white/[0.04] hover:text-white">Web Development</a>
-                                <a href="../../index.html#e-commerce" class="block px-4 py-2.5 text-sm text-gray-300 transition-colors hover:bg-white/[0.04] hover:text-white">E-Commerce</a>
-                                <a href="../../index.html#api-integration" class="block px-4 py-2.5 text-sm text-gray-300 transition-colors hover:bg-white/[0.04] hover:text-white">API Integration</a>
-                                <a href="../../index.html#cloud-solutions" class="block px-4 py-2.5 text-sm text-gray-300 transition-colors hover:bg-white/[0.04] hover:text-white">Cloud Solutions</a>
+                                <a href="/#web-development" class="block px-4 py-2.5 text-sm text-gray-300 transition-colors hover:bg-white/[0.04] hover:text-white">Web Development</a>
+                                <a href="/#e-commerce" class="block px-4 py-2.5 text-sm text-gray-300 transition-colors hover:bg-white/[0.04] hover:text-white">E-Commerce</a>
+                                <a href="/#api-integration" class="block px-4 py-2.5 text-sm text-gray-300 transition-colors hover:bg-white/[0.04] hover:text-white">API Integration</a>
+                                <a href="/#cloud-solutions" class="block px-4 py-2.5 text-sm text-gray-300 transition-colors hover:bg-white/[0.04] hover:text-white">Cloud Solutions</a>
                                 <div class="my-1.5 border-t border-white/10"></div>
-                                <a href="../../index.html#seo-optimization" class="block px-4 py-2.5 text-sm text-gray-300 transition-colors hover:bg-white/[0.04] hover:text-white">SEO Optimization</a>
+                                <a href="/#seo-optimization" class="block px-4 py-2.5 text-sm text-gray-300 transition-colors hover:bg-white/[0.04] hover:text-white">SEO Optimization</a>
                             </div>
                         </div>
 
-                        <!-- Tools Dropdown -->
-                        <div class="relative group" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false">
-                            <a href="../tools/index.html" class="nav-link text-white hover:text-gray-300 transition-colors flex items-center text-sm whitespace-nowrap">
-                                Tools
-                                <svg class="w-3.5 h-3.5 ml-0.5 transition-transform duration-200" :class="{ 'rotate-180': open }" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                                </svg>
-                            </a>
-                            <div x-show="open"
-                                 x-transition:enter="transition ease-out duration-150"
-                                 x-transition:enter-start="opacity-0 translate-y-1"
-                                 x-transition:enter-end="opacity-100 translate-y-0"
-                                 x-transition:leave="transition ease-in duration-100"
-                                 x-transition:leave-start="opacity-100 translate-y-0"
-                                 x-transition:leave-end="opacity-0 translate-y-1"
-                                 class="absolute left-1/2 z-50 mt-2 w-64 -translate-x-1/2 overflow-hidden rounded-xl border border-white/10 bg-[#0a0a0a] py-2 shadow-xl"
-                                 @mouseenter="open = true" @mouseleave="open = false" style="display: none;">
-                                <a href="../tools/pfp/index.html" class="block px-4 py-2.5 text-sm text-gray-300 transition-colors hover:bg-white/[0.04] hover:text-white">PFP Previewer</a>
-                                <a href="../tools/colors/index.html" class="block px-4 py-2.5 text-sm text-gray-300 transition-colors hover:bg-white/[0.04] hover:text-white">Color Palette Generator</a>
-                                <a href="../tools/qr/index.html" class="block px-4 py-2.5 text-sm text-gray-300 transition-colors hover:bg-white/[0.04] hover:text-white">QR Code Generator</a>
-                                <div class="my-1.5 border-t border-white/10"></div>
-                                <a href="../tools/index.html" class="block px-4 py-2.5 text-sm text-gray-500 transition-colors hover:bg-white/[0.04] hover:text-white">View all tools</a>
-                            </div>
-                        </div>
+                        <a href="/pages/projects/" class="nav-link text-white hover:text-gray-300 transition-colors text-sm whitespace-nowrap">Projects</a>
 
-                        <a href="index.html" class="nav-link text-white hover:text-gray-300 transition-colors text-sm whitespace-nowrap">About Us</a>
+                        <a href="/pages/about/" class="nav-link text-white hover:text-gray-300 transition-colors text-sm whitespace-nowrap">About Us</a>
                         <a href="https://blog.blacnova.net" target="_blank" rel="noopener noreferrer" class="nav-link text-white hover:text-gray-300 transition-colors text-sm whitespace-nowrap">Blog</a>
-                        <a href="../../index.html#contact" class="nav-link text-white hover:text-gray-300 transition-colors text-sm whitespace-nowrap">Contact Us</a>
-                        <a href="../../index.html#quote" class="nav-link text-white hover:text-gray-300 transition-colors text-sm whitespace-nowrap">Get Quote</a>
+                        <a href="/#contact" class="nav-link text-white hover:text-gray-300 transition-colors text-sm whitespace-nowrap">Contact Us</a>
+                        <a href="/#quote" class="nav-link text-white hover:text-gray-300 transition-colors text-sm whitespace-nowrap">Get Quote</a>
                     </div>
                 </nav>
                 
@@ -198,7 +133,7 @@
                     <a href="https://dashboard.blacnova.net/" class="btn-primary px-6 py-2 rounded-3xl transition-all font-medium hover:bg-opacity-90">Dashboard</a>
                 </div>
                 
-                <button id="mobile-menu-button" class="md:hidden focus:outline-none text-white" aria-label="Open menu">
+                <button id="mobile-menu-button" class="md:hidden focus:outline-none text-white" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                 </button>
             </div>
@@ -293,10 +228,10 @@
                     <div class="mb-4">
                         <h4 class="font-medium text-gray-300 mb-2">Development</h4>
                         <div class="space-y-2 ml-2">
-                            <a href="../../index.html#web-development" class="block py-1 text-gray-400 hover:text-white transition-colors">Web Development</a>
-                            <a href="../../index.html#e-commerce" class="block py-1 text-gray-400 hover:text-white transition-colors">E-Commerce</a>
-                            <a href="../../index.html#api-integration" class="block py-1 text-gray-400 hover:text-white transition-colors">API Integration</a>
-                            <a href="../../index.html#cloud-solutions" class="block py-1 text-gray-400 hover:text-white transition-colors">Cloud Solutions</a>
+                            <a href="/#web-development" class="block py-1 text-gray-400 hover:text-white transition-colors">Web Development</a>
+                            <a href="/#e-commerce" class="block py-1 text-gray-400 hover:text-white transition-colors">E-Commerce</a>
+                            <a href="/#api-integration" class="block py-1 text-gray-400 hover:text-white transition-colors">API Integration</a>
+                            <a href="/#cloud-solutions" class="block py-1 text-gray-400 hover:text-white transition-colors">Cloud Solutions</a>
                         </div>
                     </div>
                     
@@ -304,45 +239,18 @@
                     <div class="mb-4">
                         <h4 class="font-medium text-gray-300 mb-2">Growth</h4>
                         <div class="space-y-2 ml-2">
-                            <a href="../../index.html#seo-optimization" class="block py-1 text-gray-400 hover:text-white transition-colors">SEO Optimization</a>
+                            <a href="/#seo-optimization" class="block py-1 text-gray-400 hover:text-white transition-colors">SEO Optimization</a>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Tools Mobile Dropdown -->
-            <div class="mobile-dropdown">
-                <button class="mobile-dropdown-btn flex items-center justify-between w-full text-white hover:text-gray-300 text-xl transition-colors">
-                    <span>Tools</span>
-                    <svg class="w-5 h-5 rotate-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                    </svg>
-                </button>
-                <div class="mobile-dropdown-content mt-2 ml-4">
-                    
-                    <!-- Design Tools -->
-                    <div class="mb-4">
-                        <h4 class="font-medium text-gray-300 mb-2">Design Tools</h4>
-                        <div class="space-y-2 ml-2">
-                            <a href="../tools/pfp/index.html" class="block py-1 text-gray-400 hover:text-white transition-colors">PFP Previewer</a>
-                            <a href="../tools/colors/index.html" class="block py-1 text-gray-400 hover:text-white transition-colors">Color Palette Generator</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Web Utilities -->
-                    <div class="mb-4">
-                        <h4 class="font-medium text-gray-300 mb-2">Web Utilities</h4>
-                        <div class="space-y-2 ml-2">
-                            <a href="../tools/qr/index.html" class="block py-1 text-gray-400 hover:text-white transition-colors">QR Code Generator</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <a href="index.html" class="nav-link text-white hover:text-gray-300 text-xl transition-colors">About Us</a>
+
+            <a href="/pages/projects/" class="nav-link text-white hover:text-gray-300 transition-colors text-xl">Projects</a>
+
+            <a href="/pages/about/" class="nav-link text-white hover:text-gray-300 text-xl transition-colors">About Us</a>
             <a href="https://blog.blacnova.net" target="_blank" rel="noopener noreferrer" class="nav-link text-white hover:text-gray-300 text-xl transition-colors">Blog</a>
-            <a href="../../index.html#contact" class="nav-link text-white hover:text-gray-300 text-xl transition-colors">Contact Us</a>
-            <a href="../../index.html#quote" class="nav-link text-white hover:text-gray-300 text-xl transition-colors">Get Quote</a>
+            <a href="/#contact" class="nav-link text-white hover:text-gray-300 text-xl transition-colors">Contact Us</a>
+            <a href="/#quote" class="nav-link text-white hover:text-gray-300 text-xl transition-colors">Get Quote</a>
             <a href="https://dashboard.blacnova.net/" class="btn-primary px-6 py-3 rounded-3xl transition-all text-center mt-4 font-medium hover:bg-opacity-90">Dashboard</a>
         </nav>
     </div>
@@ -357,9 +265,10 @@
                 <div class="text-center mb-14">
                     <img src="../../ui/img/bn_orange.png" data-bn-media="bn_orange.png" alt="Blacnova" class="w-12 h-12 object-contain mx-auto mb-6">
                     <p class="mb-3 text-sm tracking-wider text-[#d4611c] uppercase" data-bn-content="c_about_eyebrow">How We Work</p>
-                    <h1 class="text-3xl md:text-4xl text-gray-900" data-bn-content="c_about_title">What We Stand For</h1>
+                    <h1 class="text-3xl md:text-4xl text-gray-900">About Blacnova Development</h1>
                     <p class="mt-4 max-w-2xl mx-auto text-gray-600" data-bn-content="c_about_intro">Blacnova Development builds modern websites and digital tools for businesses in Las Cruces and beyond.</p>
                 </div>
+                <h2 class="mb-6 text-center text-2xl text-gray-900" data-bn-content="c_about_title">What We Stand For</h2>
                 <div class="bn-connected grid grid-cols-1 sm:grid-cols-2">
                     <div class="bn-connected-cell p-7 md:p-8">
                         <div class="flex items-center gap-3 mb-3">
@@ -402,21 +311,21 @@
                     <p class="text-gray-600" data-bn-content="c_about_offer_desc">From concept to launch and beyond, here's what we can help with.</p>
                 </div>
                 <div class="bn-connected">
-                    <a href="../../index.html#web-development" class="bn-connected-cell flex items-center justify-between gap-4 p-5 md:p-6 group">
+                    <a href="/#web-development" class="bn-connected-cell flex items-center justify-between gap-4 p-5 md:p-6 group">
                         <div>
                             <h3 class="text-lg text-gray-900 mb-1">Web Development</h3>
                             <p class="text-sm text-gray-600">Custom sites and apps with responsive design and solid performance.</p>
                         </div>
                         <i class="ph ph-arrow-right text-[#d4611c] flex-shrink-0"></i>
                     </a>
-                    <a href="../../index.html#seo-optimization" class="bn-connected-cell flex items-center justify-between gap-4 p-5 md:p-6 group">
+                    <a href="/#seo-optimization" class="bn-connected-cell flex items-center justify-between gap-4 p-5 md:p-6 group">
                         <div>
                             <h3 class="text-lg text-gray-900 mb-1">SEO Optimization</h3>
                             <p class="text-sm text-gray-600">Visibility and lead generation that supports real growth.</p>
                         </div>
                         <i class="ph ph-arrow-right text-[#d4611c] flex-shrink-0"></i>
                     </a>
-                    <a href="../../index.html#cloud-solutions" class="bn-connected-cell flex items-center justify-between gap-4 p-5 md:p-6 group">
+                    <a href="/#cloud-solutions" class="bn-connected-cell flex items-center justify-between gap-4 p-5 md:p-6 group">
                         <div>
                             <h3 class="text-lg text-gray-900 mb-1">Custom Solutions</h3>
                             <p class="text-sm text-gray-600">Integrations, cloud setup, and tools tailored to how you operate.</p>
@@ -460,8 +369,8 @@
                     Read our latest notes on web and marketing at <a href="https://blog.blacnova.net" target="_blank" rel="noopener noreferrer" class="text-[#d4611c]">blog.blacnova.net</a>, or reach out when you're ready for a project.
                 </p>
                 <div class="flex flex-wrap items-center justify-center gap-4">
-                    <a href="../../index.html#quote" class="inline-flex items-center justify-center rounded-full bg-[#d4611c] px-6 py-2.5 text-sm text-white transition-colors hover:bg-[#c55718]">Get a Quote</a>
-                    <a href="../../index.html#contact" class="text-sm text-gray-600 transition-colors hover:text-gray-900">Contact Us</a>
+                    <a href="/#quote" class="inline-flex items-center justify-center rounded-full bg-[#d4611c] px-6 py-2.5 text-sm text-white transition-colors hover:bg-[#c55718]">Get a Quote</a>
+                    <a href="/#contact" class="text-sm text-gray-600 transition-colors hover:text-gray-900">Contact Us</a>
                     <a href="https://blog.blacnova.net" target="_blank" rel="noopener noreferrer" class="text-sm text-gray-600 transition-colors hover:text-gray-900">Visit Blog</a>
                 </div>
             </div>
@@ -472,7 +381,7 @@
     <footer class="bg-black text-white py-12">
         <div class="container mx-auto px-4">
             <div class="flex justify-center scroll-animate" data-animation="animate__fadeIn">
-                <a href="../../index.html" aria-label="Back to homepage">
+                <a href="/" aria-label="Back to homepage">
                     <img src="../../ui/img/bn.png" alt="Blacnova Development Icon" class="h-20 mx-auto">
                 </a>
             </div>
@@ -484,13 +393,6 @@
     </footer>
     
     <script src="../../ui/js/ui.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/simmerjs@1.0.3/dist/shimmer.min.js"></script>
 
     <script src="../../ui/js/BN-Cta.js"></script>
     <script src="../../ui/js/BN-Contact.js"></script>
@@ -528,29 +430,6 @@
                 });
             }
 
-            // Update footer year
-            document.getElementById('year').textContent = new Date().getFullYear();
-
-            // Mobile menu toggle
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const closeMenuButton = document.getElementById('close-menu-button');
-            const menuOverlay = document.getElementById('menu-overlay');
-
-            mobileMenuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('closed');
-                menuOverlay.classList.toggle('hidden');
-            });
-
-            closeMenuButton.addEventListener('click', () => {
-                mobileMenu.classList.add('closed');
-                menuOverlay.classList.add('hidden');
-            });
-
-            menuOverlay.addEventListener('click', () => {
-                mobileMenu.classList.add('closed');
-                menuOverlay.classList.add('hidden');
-            });
         });
     </script>
 </body>

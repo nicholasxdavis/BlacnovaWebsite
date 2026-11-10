@@ -1,4 +1,8 @@
 ﻿node_modules/
 .development/lighthouse/
+/.development/
+/.env*
+/.dev.vars*
+/.wrangler/
 .DS_Store
 Thumbs.db

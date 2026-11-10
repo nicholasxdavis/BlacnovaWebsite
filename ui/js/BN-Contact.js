@@ -237,7 +237,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                         </svg>
                     </button>
-                    <h1 id="bn-contact-form-title">Contact Us</h1>
+                    <h2 id="bn-contact-form-title">Contact Us</h2>
                     <div id="bn-contact-inner-box">
                         <p style="text-align: center; margin: 0 0 1.1rem; color: #6b7280; font-size: 0.875rem; font-weight: 400;">Fill out this form. We'll get back to you as soon as possible.</p>
                         <form id="bn-contact-form" action="#" method="POST" style="flex-grow: 1; display: flex; flex-direction: column; min-height: 0;">

@@ -11,7 +11,6 @@
 - [About](https://www.blacnova.net/pages/about/): Who we are
 - [Projects](https://www.blacnova.net/pages/projects/): Client work and case studies
 - [Start a Project](https://www.blacnova.net/pages/intake/): Project intake form
-- [Free Tools](https://www.blacnova.net/pages/tools/): Color, font, QR, SSL, and PFP tools
 
 ## Blog
 

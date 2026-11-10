@@ -13,11 +13,11 @@
 </script>
 
     <meta charset="UTF-8">
+    <script src="/ui/js/bn-cms.js?v=2"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="ui/js/bn-cms.js"></script>
 
-    <title>Blacnova Development | Website Design & Web Development in Las Cruces, NM</title>
-    <meta name="description" content="Blacnova Development builds fast, SEO-ready websites for Las Cruces and Mesilla Valley businesses. Web design, custom development, and local search that gets you found.">
+    <title>Web Design &amp; Development in Las Cruces | Blacnova</title>
+    <meta name="description" content="Blacnova designs and develops fast, search-friendly websites for businesses in Las Cruces and the Mesilla Valley. Explore our work or start a project.">
     <meta name="keywords" content="website design Las Cruces, web development Las Cruces, Las Cruces web design, SEO Las Cruces NM, Mesilla website, digital agency Las Cruces, custom business websites">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="author" content="Blacnova Development">
@@ -38,6 +38,8 @@
     <meta property="og:title" content="Blacnova Development | Website Design & Web Development in Las Cruces, NM">
     <meta property="og:description" content="Fast, SEO-ready websites for Las Cruces and Mesilla Valley businesses. Design, development, and local search.">
     <meta property="og:image" content="https://www.blacnova.net/img/og-default.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Blacnova Development - Las Cruces web design">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -47,15 +49,13 @@
     <meta name="twitter:image" content="https://www.blacnova.net/img/og-default.png">
 
     <link rel="icon" href="ui/img/bn.png" type="image/png">
-    <link rel="apple-touch-icon" href="img/bn.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/regular/style.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/fill/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.2/dist/full.css" rel="stylesheet" type="text/css" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" type="text/css" href="ui/css/styles.css">
     <style>
@@ -81,42 +81,10 @@
     </style>
     <script src="ui/js/PreviousPage.js"></script>
     <script src="ui/js/hashtags.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="/ui/css/tailwind.css">
     <!-- Alpine JS for dropdowns -->
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.9/dist/cdn.min.js" defer></script>
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'bn-soft': '#FAF9EE',
-                        'bn-green': '#1A1A1a',
-                        'bn-white': '#EEEEEE',
-                        'bn-black': '#010101',
-                        'bn-dark': '#1A1A1A',
-                        forge: { // Added forge colors for the dropdown
-                            50: '#fff7ed',
-                            100: '#ffedd5',
-                            200: '#fed7aa',
-                            300: '#fdba74',
-                            400: '#fb923c',
-                            500: '#f97316',
-                            600: '#ea580c',
-                            700: '#c2410c',
-                            800: '#9a3412',
-                            900: '#7c2d12',
-                        },
-                    },
-                    fontFamily: {
-                        sans: ['Poppins', 'sans-serif'],
-                        heading: ['Poppins', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
     
     <script type="application/ld+json">
     {
@@ -187,9 +155,7 @@
               { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Local SEO", "url": "https://www.blacnova.net/las-cruces-seo/" } }
             ]
           },
-          "sameAs": [
-            "https://blog.blacnova.net"
-          ]
+          "sameAs": ["https://www.instagram.com/blacnovaweb/"]
         }
       ]
     }
@@ -206,11 +172,11 @@
             <div class="header-content flex justify-between items-center h-24">
                 <div class="flex items-center">
                     <a href="/" class="flex items-center">
-                        <img src="ui/img/logo_white.png" alt="Blacnova Development Logo" class="logo h-20">
+                        <img src="ui/img/logo_white.png" width="1000" height="1000" alt="Blacnova Development Logo" class="logo h-20 w-auto">
                     </a>
                 </div>
                 
-                <nav class="hidden md:flex items-center absolute left-1/2 transform -translate-x-1/2">
+                <nav class="hidden lg:flex items-center absolute left-1/2 transform -translate-x-1/2">
                     <div class="flex items-center gap-x-4 lg:gap-x-5">
                         <!-- Services Dropdown -->
                         <div class="relative group" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false">
@@ -242,43 +208,20 @@
                             </div>
                         </div>
 
-                        <!-- Tools Dropdown -->
-                        <div class="relative group" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false">
-                            <a href="pages/tools/index.html" class="nav-link text-white hover:text-gray-300 transition-colors flex items-center text-sm whitespace-nowrap">
-                                Tools
-                                <svg class="w-3.5 h-3.5 ml-0.5 transition-transform duration-200" :class="{ 'rotate-180': open }" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                                </svg>
-                            </a>
-                            <div x-show="open"
-                                 x-transition:enter="transition ease-out duration-150"
-                                 x-transition:enter-start="opacity-0 translate-y-1"
-                                 x-transition:enter-end="opacity-100 translate-y-0"
-                                 x-transition:leave="transition ease-in duration-100"
-                                 x-transition:leave-start="opacity-100 translate-y-0"
-                                 x-transition:leave-end="opacity-0 translate-y-1"
-                                 class="absolute left-1/2 z-50 mt-2 w-64 -translate-x-1/2 overflow-hidden rounded-xl border border-white/10 bg-[#0a0a0a] py-2 shadow-xl"
-                                 @mouseenter="open = true" @mouseleave="open = false" style="display: none;">
-                                <a href="pages/tools/pfp/index.html" class="block px-4 py-2.5 text-sm text-gray-300 transition-colors hover:bg-white/[0.04] hover:text-white">PFP Previewer</a>
-                                <a href="pages/tools/colors/index.html" class="block px-4 py-2.5 text-sm text-gray-300 transition-colors hover:bg-white/[0.04] hover:text-white">Color Palette Generator</a>
-                                <a href="pages/tools/qr/index.html" class="block px-4 py-2.5 text-sm text-gray-300 transition-colors hover:bg-white/[0.04] hover:text-white">QR Code Generator</a>
-                                <div class="my-1.5 border-t border-white/10"></div>
-                                <a href="pages/tools/index.html" class="block px-4 py-2.5 text-sm text-gray-500 transition-colors hover:bg-white/[0.04] hover:text-white">View all tools</a>
-                            </div>
-                        </div>
+                        <a href="/pages/projects/" class="nav-link text-white hover:text-gray-300 text-sm whitespace-nowrap">Projects</a>
 
-                        <a href="pages/about/index.html" class="nav-link text-white hover:text-gray-300 transition-colors text-sm whitespace-nowrap">About Us</a>
+                        <a href="pages/about/" class="nav-link text-white hover:text-gray-300 transition-colors text-sm whitespace-nowrap">About Us</a>
                         <a href="https://blog.blacnova.net" target="_blank" rel="noopener noreferrer" class="nav-link text-white hover:text-gray-300 transition-colors text-sm whitespace-nowrap">Blog</a>
                         <a href="#contact" class="nav-link text-white hover:text-gray-300 transition-colors text-sm whitespace-nowrap">Contact Us</a>
                         <a href="#quote" class="nav-link text-white hover:text-gray-300 transition-colors text-sm whitespace-nowrap">Get Quote</a>
                     </div>
                 </nav>
                 
-                <div class="hidden md:flex items-center">
+                <div class="hidden lg:flex items-center">
                     <a href="https://dashboard.blacnova.net/" class="btn-primary px-6 py-2 rounded-3xl transition-all font-medium hover:bg-opacity-90">Dashboard</a>
                 </div>
                 
-                <button id="mobile-menu-button" class="md:hidden focus:outline-none text-white" aria-label="Open menu">
+                <button id="mobile-menu-button" class="lg:hidden focus:outline-none text-white" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                 </button>
             </div>
@@ -352,88 +295,46 @@
 
 })();
     </script>
- <div id="mobile-menu" class="mobile-menu fixed inset-y-0 right-0 w-64 shadow-xl z-50 p-6 closed">
+    <dialog id="mobile-menu" class="bn-home-menu" aria-label="Site menu">
         <div class="flex justify-end mb-8">
-            <button id="close-menu-button" class="focus:outline-none text-white" aria-label="Close menu">
+            <button id="close-menu-button" autofocus class="focus:outline-none text-white" aria-label="Close menu">
                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
             </button>
         </div>
         
         <nav class="flex flex-col space-y-6">
-            <!-- Services Mobile Dropdown -->
-            <div class="mobile-dropdown">
-                <button class="mobile-dropdown-btn flex items-center justify-between w-full text-white hover:text-gray-300 text-xl transition-colors">
-                    <span>Our Services</span>
-                    <svg class="w-5 h-5 rotate-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                    </svg>
-                </button>
-                <div class="mobile-dropdown-content mt-2 ml-4">
-                    <!-- Development Services -->
-                    <div class="mb-4">
-                        <h4 class="font-medium text-gray-300 mb-2">Development</h4>
-                        <div class="space-y-2 ml-2">
-                            <a href="#web-development" class="block py-1 text-gray-400 hover:text-white transition-colors">Web Development</a>
-                            <a href="#e-commerce" class="block py-1 text-gray-400 hover:text-white transition-colors">E-Commerce</a>
-                            <a href="#api-integration" class="block py-1 text-gray-400 hover:text-white transition-colors">API Integration</a>
-                            <a href="#cloud-solutions" class="block py-1 text-gray-400 hover:text-white transition-colors">Cloud Solutions</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Growth Services -->
-                    <div class="mb-4">
-                        <h4 class="font-medium text-gray-300 mb-2">Growth</h4>
-                        <div class="space-y-2 ml-2">
-                            <a href="#seo-optimization" class="block py-1 text-gray-400 hover:text-white transition-colors">SEO Optimization</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Tools Mobile Dropdown -->
-            <div class="mobile-dropdown">
-                <button class="mobile-dropdown-btn flex items-center justify-between w-full text-white hover:text-gray-300 text-xl transition-colors">
-                    <span>Tools</span>
-                    <svg class="w-5 h-5 rotate-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                    </svg>
-                </button>
-                <div class="mobile-dropdown-content mt-2 ml-4">
-                    <div class="mb-4">
-                        <div class="space-y-2 ml-2">
-                            <a href="pages/tools/pfp/index.html" class="block py-1 text-gray-400 hover:text-white transition-colors">PFP Previewer</a>
-                            <a href="pages/tools/colors/index.html" class="block py-1 text-gray-400 hover:text-white transition-colors">Color Palette Generator</a>
-                            <a href="pages/tools/qr/index.html" class="block py-1 text-gray-400 hover:text-white transition-colors">QR Code Generator</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <a href="pages/about/index.html" class="nav-link text-white hover:text-gray-300 text-xl transition-colors">About Us</a>
+            <details class="bn-home-menu__services">
+                <summary>Services</summary>
+                <a href="/las-cruces-web-design/">Web Design</a>
+                <a href="/las-cruces-web-development/">Web Development</a>
+                <a href="/las-cruces-seo/">Local SEO</a>
+                <a href="#services">All Services</a>
+            </details>
+            <a href="/pages/projects/" class="text-white text-xl">Client Projects</a>
+            <a href="pages/about/" class="nav-link text-white hover:text-gray-300 text-xl transition-colors">About Us</a>
             <a href="https://blog.blacnova.net" target="_blank" rel="noopener noreferrer" class="nav-link text-white hover:text-gray-300 text-xl transition-colors">Blog</a>
             <a href="#contact" class="nav-link text-white hover:text-gray-300 text-xl transition-colors">Contact Us</a>
             <a href="#quote" class="nav-link text-white hover:text-gray-300 text-xl transition-colors">Get Quote</a>
             <a href="https://dashboard.blacnova.net/" class="btn-primary px-6 py-3 rounded-3xl transition-all text-center mt-4 font-medium hover:bg-opacity-90">Dashboard</a>
         </nav>
-    </div>
-    
-    <div id="menu-overlay" class="fixed inset-0 bg-black bg-opacity-70 z-40 hidden"></div>
+    </dialog>
     
     <main class="mt-24">
 
 
         <section id="home" class="hero" style="height: 56vh; min-height: 430px;">
-            <img src="ui/img/hero.png" data-bn-media="hero.png" alt="Modern workspace with laptops showing code" class="hero-bg">
+            <img src="/ui/img/optimized/hero-1920.webp" srcset="/ui/img/optimized/hero-400.webp 400w, /ui/img/optimized/hero-800.webp 800w, /ui/img/optimized/hero-1200.webp 1200w, /ui/img/optimized/hero-1920.webp 1920w" sizes="100vw" width="1920" height="909" fetchpriority="high" data-bn-default-media="https://www.blacnova.net/ui/img/hero.png" data-bn-media="hero.png" alt="" class="hero-bg">
 
             <div class="hero-overlay"></div>
             <div class="hero-content container mx-auto px-4 h-full flex items-center">
                 <div class="flex flex-col lg:flex-row items-center w-full">
                     <div class="w-full lg:w-1/2 mb-8 lg:mb-0 text-center lg:text-left" >
-                        <h1 class="text-4xl md:text-5xl font-medium mb-4 leading-tight text-white font-heading animate__animated animate__fadeInDown" data-bn-content="c_home_headline">Elevate Your Digital Presence</h1>
-                        <p class="text-lg md:text-xl text-gray-300 mb-6 mx-auto lg:mx-0 max-w-lg animate__animated animate__fadeInDown animate__delay-1s" data-bn-content="c_home_sub">Cutting-edge development solutions tailored to your business needs in Las Cruces, New Mexico</p>
-                        <div class="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start animate__animated animate__fadeInUp animate__delay-2s">
-                            <a href="#quote" class="btn-primary px-6 py-3 rounded-3xl text-base text-center font-medium transition-all" data-bn-content="c_home_cta">Start Your Project</a>
-                            <a href="#services" class="btn-primary px-6 py-3 rounded-3xl text-base text-center font-medium transition-all" data-bn-content="c_home_cta2">Our Services</a>
+                        <p class="mb-2 text-sm text-gray-300" data-bn-content="c_home_headline">Elevate Your Digital Presence</p>
+                        <h1 class="text-4xl md:text-5xl font-medium mb-4 leading-tight text-white font-heading">Web Design in Las Cruces, NM</h1>
+                        <p class="text-lg md:text-xl text-gray-300 mb-6 mx-auto lg:mx-0 max-w-lg" data-bn-content="c_home_sub">Custom websites, web development, and local SEO for businesses in Las Cruces and the Mesilla Valley.</p>
+                        <div class="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
+                            <a href="/pages/intake/" class="btn-primary px-6 py-3 rounded-3xl text-base text-center font-medium transition-all" data-bn-content="c_home_cta">Start Your Project</a>
+                            <a href="#services" class="px-6 py-3 rounded-3xl text-base text-center text-white border border-white/60 hover:bg-white/10 transition-colors" data-bn-content="c_home_cta2">Our Services</a>
                         </div>
                     </div>
                     
@@ -441,7 +342,7 @@
     <div class="laptop-mockup no-animation">
         <div class="laptop-frame">
             <div class="laptop-screen">
-                <img src="ui/img/one.png" data-bn-media="one.png" alt="Blacnova portfolio website screenshot" class="laptop-image">
+                <img src="/ui/img/optimized/one.webp" width="1440" height="810" loading="lazy" decoding="async" data-bn-default-media="https://www.blacnova.net/ui/img/one.png" data-bn-media="one.png" alt="" class="laptop-image">
             </div>
         </div>
         <div class="laptop-base">
@@ -451,7 +352,7 @@
     <div class="phone-mockup no-animation">
         <div class="phone-frame">
             <div class="phone-screen">
-                <img src="ui/img/three.png" data-bn-media="three.png" alt="Blacnova mobile app screenshot" class="phone-image">
+                <img src="/ui/img/optimized/three.webp" width="376" height="741" loading="lazy" decoding="async" data-bn-default-media="https://www.blacnova.net/ui/img/three.png" data-bn-media="three.png" alt="" class="phone-image">
             </div>
             <div class="phone-notch"></div>
         </div>
@@ -468,19 +369,19 @@
                 
                 <div class="flex flex-nowrap justify-center items-center gap-3 sm:gap-5 md:gap-10 overflow-x-auto px-2 md:px-4 py-2 no-scrollbar scroll-animate" data-animation="animate__fadeInUp">
                     <div class="bn-logo-slot">
-                        <img src="ui/img/farm.png" alt="FARMesilla">
+                        <img src="ui/img/farm.png" width="720" height="720" loading="lazy" decoding="async" alt="FARMesilla">
                     </div>
                     <div class="bn-logo-slot">
-                        <img src="ui/img/chios.png" alt="Chios Cleanings">
+                        <img src="ui/img/chios.png" width="500" height="500" loading="lazy" decoding="async" alt="Chios Cleanings">
                     </div>
                     <div class="bn-logo-slot">
-                        <img src="ui/img/zia.png" alt="Zia Insider">
+                        <img src="ui/img/zia.png" width="500" height="500" loading="lazy" decoding="async" alt="Zia Insider">
                     </div>
                     <div class="bn-logo-slot">
-                        <img src="ui/img/ajs.png" alt="AJ's Repair">
+                        <img src="ui/img/ajs.png" width="422" height="314" loading="lazy" decoding="async" alt="AJ's Repair">
                     </div>
                     <div class="bn-logo-slot bn-logo-slot--wide">
-                        <img src="ui/img/jv-wood.png" alt="JV Wood Pallets">
+                        <img src="ui/img/jv-wood.png" width="647" height="437" loading="lazy" decoding="async" alt="JV Wood Pallets">
                     </div>
                 </div>
             </div>
@@ -667,24 +568,6 @@
                 </div>
             </div>
         </section>
-    <section id="perf-seo-preview" class="bn-game-block py-16 md:py-20">
-        <div class="container mx-auto px-6 max-w-7xl">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-                <div class="lg:col-span-6">
-                    <span class="bn-game-kicker">Speed, performance &amp; SEO</span>
-                    <h2 class="text-3xl lg:text-4xl text-white mb-5">Sites engineered to load fast and rank clean</h2>
-                    <div class="bn-game-copy max-w-xl">
-                        <p>Our team ships on Cloudflare's edge network for global cache, TLS, and deploy velocity, then layers technical SEO that search engines can trust: IndexNow for rapid URL discovery, Search Console and webmaster tooling for crawl health, structured data, and repo pipelines built so sitemaps, redirects, and Core Web Vitals stay production-grade after every release.</p>
-                    </div>
-                    <a href="las-cruces-seo/index.html" class="inline-block mt-6 px-8 py-3 rounded-3xl text-base font-medium text-[#1a1a1a] bg-white transition-colors">Explore our SEO approach</a>
-                </div>
-                <div class="lg:col-span-6">
-                    <img src="ui/img/dash.png" alt="Blacnova performance and traffic overview dashboard" class="bn-game-shot">
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Completed Project CTA Section -->
     <section id="project-preview-cta" class="relative py-10 md:py-14 overflow-hidden" style="background-color: #d4611c; background-image: url('https://transparenttextures.com/patterns/transparent-square-tiles.png');">
         
@@ -697,35 +580,16 @@
                     <h2 class="text-3xl lg:text-4xl text-[#ffffff] mb-5">Website Showcase</h2>
                     <p class="text-[#ffffffe6] mb-6 max-w-lg mx-auto lg:mx-0">Live sites for golf clubs, florists, restaurants, shops, and service businesses. Built to look sharp on a phone and hold up in a search result.</p>
                     <div class="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
-                        <a href="pages/projects/index.html#clients" class="inline-block px-8 py-3 rounded-3xl text-base font-medium text-[#d4611c] bg-[#ffffff] transition-colors">View Projects</a>
-                        <a href="pages/projects/index.html#games" class="inline-block px-8 py-3 rounded-3xl text-base font-medium text-white border border-white/40 transition-colors hover:bg-white/10">Game Development</a>
+                        <a href="pages/projects/#clients" class="inline-block px-8 py-3 rounded-3xl text-base font-medium text-[#d4611c] bg-[#ffffff] transition-colors">View Projects</a>
                     </div>
                 </div>
 
                 <div class="lg:col-span-6 flex items-center justify-center lg:justify-end mt-10 lg:mt-0">
                    <div class="bn-shot-stack">
-                        <img src="ui/img/clients/apex.jpg" alt="Apex Auto website">
-                        <img src="ui/img/clients/minnies.jpg" alt="Minnies Flowers and Gifts website">
-                        <img src="ui/img/clients/butterfield.jpg" alt="Butterfield Trail Golf Club website">
+                        <img src="/ui/img/optimized/clients/luz.webp" alt="Luz de Luna website" width="1200" height="680" loading="lazy" decoding="async">
+                        <img src="/ui/img/optimized/clients/farmesilla.webp" alt="FARMesilla website" width="1200" height="674" loading="lazy" decoding="async">
+                        <img src="/ui/img/optimized/clients/chios.webp" alt="Chios Cleanings website" width="1200" height="677" loading="lazy" decoding="async">
                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="game-preview" class="bn-game-block py-16 md:py-20">
-        <div class="container mx-auto px-6 max-w-7xl">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-                <div class="lg:col-span-6">
-                    <img src="ui/img/games/pixelvida-night.jpg" alt="Pixelvida at night, rain over a generated city" class="bn-game-shot">
-                </div>
-                <div class="lg:col-span-6">
-                    <span class="bn-game-kicker">Studio R&amp;D</span>
-                    <h2 class="text-3xl lg:text-4xl text-white mb-5">Game development</h2>
-                    <div class="bn-game-copy max-w-xl">
-                        <p>Pixelvida is the team's flagship Lua and Love2D build: a living world with farming, combat AI, weather, and procedural generation, and every character rendered from geometric primitives instead of sprite sheets.</p>
-                    </div>
-                    <a href="pages/projects/index.html#games" class="inline-block mt-6 px-8 py-3 rounded-3xl text-base font-medium text-[#1a1a1a] bg-white transition-colors">Explore game projects</a>
                 </div>
             </div>
         </div>
@@ -734,7 +598,7 @@
        <section id="local" class="py-20 bg-white poppins-font-section relative">
     <div class="container mx-auto px-6 max-w-7xl relative z-10">
         <div class="text-center mb-16">
-            <img src="ui/img/zia-symbol.png" data-bn-media="zia-symbol.png" alt="Zia Symbol" class="mx-auto mb-6 w-16 h-16">
+            <img src="ui/img/zia-symbol.png" width="200" height="200" loading="lazy" decoding="async" data-bn-media="zia-symbol.png" alt="Zia Symbol" class="mx-auto mb-6 w-16 h-16">
             <span class="inline-block mb-4 text-sm font-semibold tracking-wider text-[#d4611c] uppercase" data-bn-content="c_local_eyebrow">Our Roots</span>
             <h2 class="text-4xl md:text-5xl font-medium mb-6 text-[#1a1a1a]">
                 <span class="section-title" data-bn-content="c_local_title">Proudly Serving Las Cruces, El Paso & Surrounding Areas</span>
@@ -747,7 +611,7 @@
             <div class="bn-connected-cell local-card p-8">
                 <h3 class="text-2xl font-medium mb-4 text-[#1a1a1a]" data-bn-content="c_local_card1_title">Community Focused</h3>
                 <p class="text-gray-600 mb-4" data-bn-content="c_local_card1_desc">We reinvest in local businesses and support the growth of the Mesilla Valley's digital economy.</p>
-                <a href="pages/about/index.html" class="flex items-center text-[#d4611c] font-medium">
+                <a href="pages/about/" class="flex items-center text-[#d4611c] font-medium">
                     <span>Learn about our initiatives</span>
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
                         <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
@@ -759,7 +623,7 @@
             <div class="bn-connected-cell local-card p-8">
                 <h3 class="text-2xl font-medium mb-4 text-[#1a1a1a]" data-bn-content="c_local_card2_title">Local Expertise</h3>
                 <p class="text-gray-600 mb-4" data-bn-content="c_local_card2_desc">Our team understands the unique needs and challenges of businesses in Southern New Mexico.</p>
-                <a href="pages/about/index.html" class="flex items-center text-[#d4611c] font-medium">
+                <a href="pages/about/" class="flex items-center text-[#d4611c] font-medium">
                     <span>About Blacnova Development</span>
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
                         <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
@@ -789,7 +653,7 @@
         <div class="container mx-auto px-4">
             <div class="flex justify-center scroll-animate" data-animation="animate__fadeIn">
                 <a href="/" aria-label="Back to homepage">
-                    <img src="ui/img/bn.png" alt="Blacnova Development Icon" class="h-20 mx-auto">
+                    <img src="ui/img/bn.png" width="800" height="800" loading="lazy" decoding="async" alt="Blacnova Development Icon" class="h-20 mx-auto">
                 </a>
             </div>
             <p class="text-center text-white/70 mt-4 scroll-animate" data-animation="animate__fadeIn" data-delay="0.2s" data-bn-content="c_footer_tagline">Website design &amp; development · Las Cruces, El Paso &amp; surrounding areas.</p>
@@ -813,12 +677,6 @@
     </footer>
     
     <script src="ui/js/ui.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/shimmerjs@1.0.3/dist/shimmer.min.js"></script>
 
     <script src="ui/js/BN-Cta.js"></script>
     <script src="ui/js/BN-Contact.js"></script>
@@ -1023,30 +881,6 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 
-
-<script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-analytics.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
-
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-    apiKey: "AIzaSyDijaOhowAUActToLfD16a56y-YtNw582E",
-    authDomain: "blacnova.firebaseapp.com",
-    projectId: "blacnova",
-    storageBucket: "blacnova.firebasestorage.app",
-    messagingSenderId: "1012412900214",
-    appId: "1:1012412900214:web:bdcb173c5c53825fbb5057",
-    measurementId: "G-W6W7S1PJWE"
-  };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-</script>
 
 <script>
 // Quote form ? Blacnova API (dashboard submissions)

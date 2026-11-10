@@ -10,6 +10,7 @@
     </script>
 
     <meta charset="UTF-8">
+    <script src="/ui/js/bn-cms.js?v=2"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Projects | Blacnova Development</title>
@@ -36,89 +37,29 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.2/dist/full.css" rel="stylesheet" type="text/css" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
      <link rel="stylesheet" type="text/css" href="../../ui/css/styles.css">
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <link rel="stylesheet" href="/ui/css/tailwind.css">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.9/dist/cdn.min.js" defer></script>
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'bn-soft': '#FAF9EE',
-                        'bn-green': '#1A1A1a',
-                        'bn-white': '#EEEEEE',
-                        'bn-black': '#010101',
-                        'bn-dark': '#1A1A1A',
-                        forge: {
-                            50: '#fff7ed',
-                            100: '#ffedd5',
-                            200: '#fed7aa',
-                            300: '#fdba74',
-                            400: '#fb923c',
-                            500: '#f97316',
-                            600: '#ea580c',
-                            700: '#c2410c',
-                            800: '#9a3412',
-                            900: '#7c2d12',
-                        },
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        heading: ['inter', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
     
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Blacnova Development",
-      "image": "https://www.blacnova.net/img/logo_white.png",
-      "@id": "https://www.blacnova.net/",
-      "url": "https://www.blacnova.net/",
-      "telephone": "+1-575-270-1276",
-      "email": "nic@blacnova.net",
-      "description": "Custom website development, SEO, and full-service digital solutions for businesses in Las Cruces, NM.",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Las Cruces",
-        "addressRegion": "NM",
-        "addressCountry": "US"
-      },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday"
-        ],
-        "opens": "09:00",
-        "closes": "17:00"
-      },
-      "sameAs": [
-        "https://www.facebook.com/blacnova",
-        "https://www.twitter.com/blacnova",
-        "https://www.linkedin.com/company/blacnova"
-      ] 
-    }
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": "https://www.blacnova.net/pages/projects/#portfolio",
+  "url": "https://www.blacnova.net/pages/projects/",
+  "name": "Client Projects | Blacnova Development",
+  "description": "Selected client websites and independent game development from Blacnova Development.",
+  "isPartOf": {
+    "@id": "https://www.blacnova.net/#website"
+  },
+  "publisher": {
+    "@id": "https://www.blacnova.net/#business"
+  }
+}
     </script>
-    <style>
-        .project-card {
-            @apply bg-white rounded-3xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300;
-        }
-    </style>
-    <script src="../../ui/js/bn-cms.js"></script>
 </head>
 
 <body>
@@ -126,7 +67,7 @@
         <div class="container mx-auto px-4">
             <div class="header-content flex justify-between items-center h-24">
                 <div class="flex items-center">
-                    <a href="../../index.html" class="flex items-center">
+                    <a href="/" class="flex items-center">
                         <img src="../../ui/img/logo_white.png" alt="Blacnova Development Logo" class="logo h-20">
                     </a>
                 </div>
@@ -135,7 +76,7 @@
                     <div class="flex items-center gap-x-4 lg:gap-x-5">
                         <!-- Services Dropdown -->
                         <div class="relative group" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false">
-                            <a href="../../index.html#services" class="nav-link text-white hover:text-gray-300 transition-colors flex items-center text-sm whitespace-nowrap">
+                            <a href="/#services" class="nav-link text-white hover:text-gray-300 transition-colors flex items-center text-sm whitespace-nowrap">
                                 Our Services
                                 <svg class="w-3.5 h-3.5 ml-0.5 transition-transform duration-200" :class="{ 'rotate-180': open }" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -150,44 +91,21 @@
                                  x-transition:leave-end="opacity-0 translate-y-1"
                                  class="absolute left-1/2 z-50 mt-2 w-64 -translate-x-1/2 overflow-hidden rounded-xl border border-white/10 bg-[#0a0a0a] py-2 shadow-xl"
                                  @mouseenter="open = true" @mouseleave="open = false" style="display: none;">
-                                <a href="../../index.html#web-development" class="block px-4 py-2.5 text-sm text-gray-300 transition-colors hover:bg-white/[0.04] hover:text-white">Web Development</a>
-                                <a href="../../index.html#e-commerce" class="block px-4 py-2.5 text-sm text-gray-300 transition-colors hover:bg-white/[0.04] hover:text-white">E-Commerce</a>
-                                <a href="../../index.html#api-integration" class="block px-4 py-2.5 text-sm text-gray-300 transition-colors hover:bg-white/[0.04] hover:text-white">API Integration</a>
-                                <a href="../../index.html#cloud-solutions" class="block px-4 py-2.5 text-sm text-gray-300 transition-colors hover:bg-white/[0.04] hover:text-white">Cloud Solutions</a>
+                                <a href="/#web-development" class="block px-4 py-2.5 text-sm text-gray-300 transition-colors hover:bg-white/[0.04] hover:text-white">Web Development</a>
+                                <a href="/#e-commerce" class="block px-4 py-2.5 text-sm text-gray-300 transition-colors hover:bg-white/[0.04] hover:text-white">E-Commerce</a>
+                                <a href="/#api-integration" class="block px-4 py-2.5 text-sm text-gray-300 transition-colors hover:bg-white/[0.04] hover:text-white">API Integration</a>
+                                <a href="/#cloud-solutions" class="block px-4 py-2.5 text-sm text-gray-300 transition-colors hover:bg-white/[0.04] hover:text-white">Cloud Solutions</a>
                                 <div class="my-1.5 border-t border-white/10"></div>
-                                <a href="../../index.html#seo-optimization" class="block px-4 py-2.5 text-sm text-gray-300 transition-colors hover:bg-white/[0.04] hover:text-white">SEO Optimization</a>
+                                <a href="/#seo-optimization" class="block px-4 py-2.5 text-sm text-gray-300 transition-colors hover:bg-white/[0.04] hover:text-white">SEO Optimization</a>
                             </div>
                         </div>
 
-                        <!-- Tools Dropdown -->
-                        <div class="relative group" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false">
-                            <a href="../tools/index.html" class="nav-link text-white hover:text-gray-300 transition-colors flex items-center text-sm whitespace-nowrap">
-                                Tools
-                                <svg class="w-3.5 h-3.5 ml-0.5 transition-transform duration-200" :class="{ 'rotate-180': open }" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                                </svg>
-                            </a>
-                            <div x-show="open"
-                                 x-transition:enter="transition ease-out duration-150"
-                                 x-transition:enter-start="opacity-0 translate-y-1"
-                                 x-transition:enter-end="opacity-100 translate-y-0"
-                                 x-transition:leave="transition ease-in duration-100"
-                                 x-transition:leave-start="opacity-100 translate-y-0"
-                                 x-transition:leave-end="opacity-0 translate-y-1"
-                                 class="absolute left-1/2 z-50 mt-2 w-64 -translate-x-1/2 overflow-hidden rounded-xl border border-white/10 bg-[#0a0a0a] py-2 shadow-xl"
-                                 @mouseenter="open = true" @mouseleave="open = false" style="display: none;">
-                                <a href="../tools/pfp/index.html" class="block px-4 py-2.5 text-sm text-gray-300 transition-colors hover:bg-white/[0.04] hover:text-white">PFP Previewer</a>
-                                <a href="../tools/colors/index.html" class="block px-4 py-2.5 text-sm text-gray-300 transition-colors hover:bg-white/[0.04] hover:text-white">Color Palette Generator</a>
-                                <a href="../tools/qr/index.html" class="block px-4 py-2.5 text-sm text-gray-300 transition-colors hover:bg-white/[0.04] hover:text-white">QR Code Generator</a>
-                                <div class="my-1.5 border-t border-white/10"></div>
-                                <a href="../tools/index.html" class="block px-4 py-2.5 text-sm text-gray-500 transition-colors hover:bg-white/[0.04] hover:text-white">View all tools</a>
-                            </div>
-                        </div>
+                        <a href="/pages/projects/" class="nav-link text-white hover:text-gray-300 transition-colors text-sm whitespace-nowrap" aria-current="page">Projects</a>
 
-                        <a href="../about/index.html" class="nav-link text-white hover:text-gray-300 transition-colors text-sm whitespace-nowrap">About Us</a>
+                        <a href="/pages/about/" class="nav-link text-white hover:text-gray-300 transition-colors text-sm whitespace-nowrap">About Us</a>
                         <a href="https://blog.blacnova.net" target="_blank" rel="noopener noreferrer" class="nav-link text-white hover:text-gray-300 transition-colors text-sm whitespace-nowrap">Blog</a>
-                        <a href="../../index.html#contact" class="nav-link text-white hover:text-gray-300 transition-colors text-sm whitespace-nowrap">Contact Us</a>
-                        <a href="../../index.html#quote" class="nav-link text-white hover:text-gray-300 transition-colors text-sm whitespace-nowrap">Get Quote</a>
+                        <a href="/#contact" class="nav-link text-white hover:text-gray-300 transition-colors text-sm whitespace-nowrap">Contact Us</a>
+                        <a href="/#quote" class="nav-link text-white hover:text-gray-300 transition-colors text-sm whitespace-nowrap">Get Quote</a>
                     </div>
                 </nav>
                 
@@ -195,7 +113,7 @@
                     <a href="https://dashboard.blacnova.net/" class="btn-primary px-6 py-2 rounded-3xl transition-all font-medium hover:bg-opacity-90">Dashboard</a>
                 </div>
                 
-                <button id="mobile-menu-button" class="md:hidden focus:outline-none text-white" aria-label="Open menu">
+                <button id="mobile-menu-button" class="md:hidden focus:outline-none text-white" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                 </button>
             </div>
@@ -290,10 +208,10 @@
                     <div class="mb-4">
                         <h4 class="font-medium text-gray-300 mb-2">Development</h4>
                         <div class="space-y-2 ml-2">
-                            <a href="../../index.html#web-development" class="block py-1 text-gray-400 hover:text-white transition-colors">Web Development</a>
-                            <a href="../../index.html#e-commerce" class="block py-1 text-gray-400 hover:text-white transition-colors">E-Commerce</a>
-                            <a href="../../index.html#api-integration" class="block py-1 text-gray-400 hover:text-white transition-colors">API Integration</a>
-                            <a href="../../index.html#cloud-solutions" class="block py-1 text-gray-400 hover:text-white transition-colors">Cloud Solutions</a>
+                            <a href="/#web-development" class="block py-1 text-gray-400 hover:text-white transition-colors">Web Development</a>
+                            <a href="/#e-commerce" class="block py-1 text-gray-400 hover:text-white transition-colors">E-Commerce</a>
+                            <a href="/#api-integration" class="block py-1 text-gray-400 hover:text-white transition-colors">API Integration</a>
+                            <a href="/#cloud-solutions" class="block py-1 text-gray-400 hover:text-white transition-colors">Cloud Solutions</a>
                         </div>
                     </div>
                     
@@ -301,45 +219,18 @@
                     <div class="mb-4">
                         <h4 class="font-medium text-gray-300 mb-2">Growth</h4>
                         <div class="space-y-2 ml-2">
-                            <a href="../../index.html#seo-optimization" class="block py-1 text-gray-400 hover:text-white transition-colors">SEO Optimization</a>
+                            <a href="/#seo-optimization" class="block py-1 text-gray-400 hover:text-white transition-colors">SEO Optimization</a>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Tools Mobile Dropdown -->
-            <div class="mobile-dropdown">
-                <button class="mobile-dropdown-btn flex items-center justify-between w-full text-white hover:text-gray-300 text-xl transition-colors">
-                    <span>Tools</span>
-                    <svg class="w-5 h-5 rotate-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                    </svg>
-                </button>
-                <div class="mobile-dropdown-content mt-2 ml-4">
-                    
-                    <!-- Design Tools -->
-                    <div class="mb-4">
-                        <h4 class="font-medium text-gray-300 mb-2">Design Tools</h4>
-                        <div class="space-y-2 ml-2">
-                            <a href="../tools/pfp/index.html" class="block py-1 text-gray-400 hover:text-white transition-colors">PFP Previewer</a>
-                            <a href="../tools/colors/index.html" class="block py-1 text-gray-400 hover:text-white transition-colors">Color Palette Generator</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Web Utilities -->
-                    <div class="mb-4">
-                        <h4 class="font-medium text-gray-300 mb-2">Web Utilities</h4>
-                        <div class="space-y-2 ml-2">
-                            <a href="../tools/qr/index.html" class="block py-1 text-gray-400 hover:text-white transition-colors">QR Code Generator</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <a href="../about/index.html" class="nav-link text-white hover:text-gray-300 text-xl transition-colors">About Us</a>
+
+            <a href="/pages/projects/" class="nav-link text-white hover:text-gray-300 transition-colors text-xl" aria-current="page">Projects</a>
+
+            <a href="/pages/about/" class="nav-link text-white hover:text-gray-300 text-xl transition-colors">About Us</a>
             <a href="https://blog.blacnova.net" target="_blank" rel="noopener noreferrer" class="nav-link text-white hover:text-gray-300 text-xl transition-colors">Blog</a>
-            <a href="../../index.html#contact" class="nav-link text-white hover:text-gray-300 text-xl transition-colors">Contact Us</a>
-            <a href="../../index.html#quote" class="nav-link text-white hover:text-gray-300 text-xl transition-colors">Get Quote</a>
+            <a href="/#contact" class="nav-link text-white hover:text-gray-300 text-xl transition-colors">Contact Us</a>
+            <a href="/#quote" class="nav-link text-white hover:text-gray-300 text-xl transition-colors">Get Quote</a>
             <a href="https://dashboard.blacnova.net/" class="btn-primary px-6 py-3 rounded-3xl transition-all text-center mt-4 font-medium hover:bg-opacity-90">Dashboard</a>
         </nav>
     </div>
@@ -358,58 +249,58 @@
 
                 <div class="bn-work-grid">
                     <article class="bn-work-card">
-                        <img src="../../ui/img/clients/butterfield.jpg" alt="Butterfield Trail Golf Club homepage" loading="lazy">
+                        <img src="/ui/img/optimized/clients/butterfield.webp" alt="Butterfield Trail Golf Club homepage" width="1200" height="655" loading="lazy" decoding="async">
                         <div class="bn-work-card__body">
-                            <h2 class="bn-work-card__name">Butterfield Trail Golf Club</h2>
+                            <h2 class="bn-work-card__name"><a class="hover:underline" href="https://butterfieldtrailgolf.com/">Butterfield Trail Golf Club</a></h2>
                             <p class="bn-work-card__meta">Full site migration onto our infrastructure with about one hour of downtime, plus light front-end edits. Tee times, dining, and events stayed online.</p>
                         </div>
                     </article>
                     <article class="bn-work-card">
-                        <img src="../../ui/img/clients/apex.jpg" alt="Apex Auto homepage" loading="lazy">
+                        <img src="/ui/img/optimized/clients/apex.webp" alt="Apex Auto homepage" width="1200" height="638" loading="lazy" decoding="async">
                         <div class="bn-work-card__body">
                             <h2 class="bn-work-card__name">Apex Auto</h2>
                             <p class="bn-work-card__meta">Extended and polished an existing codebase: cleaner UI, catalog and dealer flows, and a homepage that sells PPF, tint, and performance parts.</p>
                         </div>
                     </article>
                     <article class="bn-work-card">
-                        <img src="../../ui/img/clients/minnies.jpg" alt="Minnies Flowers and Gifts homepage" loading="lazy">
+                        <img src="/ui/img/optimized/clients/minnies.webp" alt="Minnies Flowers and Gifts homepage" width="1200" height="654" loading="lazy" decoding="async">
                         <div class="bn-work-card__body">
                             <h2 class="bn-work-card__name">Minnies Flowers &amp; Gifts</h2>
                             <p class="bn-work-card__meta">Ground-up site for Las Cruces and Mesilla florals. Weddings, sympathy, delivery, and a storefront that feels like the shop.</p>
                         </div>
                     </article>
                     <article class="bn-work-card">
-                        <img src="../../ui/img/clients/farmesilla.jpg" alt="FARMesilla homepage" loading="lazy">
+                        <img src="/ui/img/optimized/clients/farmesilla.webp" alt="FARMesilla homepage" width="1200" height="674" loading="lazy" decoding="async">
                         <div class="bn-work-card__body">
                             <h2 class="bn-work-card__name">FARMesilla</h2>
                             <p class="bn-work-card__meta">Farm-to-table in Mesilla. Menus, catering, and a hero that looks like walking in the door.</p>
                         </div>
                     </article>
                     <article class="bn-work-card">
-                        <img src="../../ui/img/clients/sombrero.jpg" alt="El Sombrero Express homepage" loading="lazy">
+                        <img src="/ui/img/optimized/clients/sombrero.webp" alt="El Sombrero Express homepage" width="1200" height="680" loading="lazy" decoding="async">
                         <div class="bn-work-card__body">
-                            <h2 class="bn-work-card__name">El Sombrero Express</h2>
+                            <h2 class="bn-work-card__name"><a class="hover:underline" href="https://elsombreroexpress.com/">El Sombrero Express</a></h2>
                             <p class="bn-work-card__meta">Ground-up build for to-go and catering. Online ordering up front, directions one tap away.</p>
                         </div>
                     </article>
                     <article class="bn-work-card">
-                        <img src="../../ui/img/clients/chios.jpg" alt="Chios Cleanings homepage" loading="lazy">
+                        <img src="/ui/img/optimized/clients/chios.webp" alt="Chios Cleanings homepage" width="1200" height="677" loading="lazy" decoding="async">
                         <div class="bn-work-card__body">
                             <h2 class="bn-work-card__name">Chios Cleanings</h2>
                             <p class="bn-work-card__meta">Locally owned cleaning in Las Cruces. Quotes, services, and the team on the homepage.</p>
                         </div>
                     </article>
                     <article class="bn-work-card">
-                        <img src="../../ui/img/clients/ajs.jpg" alt="AJ's Repair homepage" loading="lazy">
+                        <img src="/ui/img/optimized/clients/ajs.webp" alt="AJ's Repair homepage" width="1200" height="679" loading="lazy" decoding="async">
                         <div class="bn-work-card__body">
                             <h2 class="bn-work-card__name">AJ's Repair</h2>
                             <p class="bn-work-card__meta">Appliance repair for the Mesilla Valley. Phone in the hero, service area on the next scroll.</p>
                         </div>
                     </article>
                     <article class="bn-work-card">
-                        <img src="../../ui/img/clients/luz.jpg" alt="Luz de Luna shop page" loading="lazy">
+                        <img src="/ui/img/optimized/clients/luz.webp" alt="Luz de Luna shop page" width="1200" height="680" loading="lazy" decoding="async">
                         <div class="bn-work-card__body">
-                            <h2 class="bn-work-card__name">Luz de Luna</h2>
+                            <h2 class="bn-work-card__name"><a class="hover:underline" href="https://luz-de-luna.pages.dev/">Luz de Luna</a></h2>
                             <p class="bn-work-card__meta">Hand-poured candles from historic Mesilla. A small shop with a product grid that stays out of the way.</p>
                         </div>
                     </article>
@@ -421,29 +312,29 @@
             <div class="container mx-auto px-6 max-w-6xl">
                 <div class="max-w-3xl mb-12 md:mb-16">
                     <span class="bn-game-kicker">Game development</span>
-                    <h2 class="text-3xl md:text-5xl text-white mb-5">Systems work our team ships after client hours</h2>
-                    <p class="bn-game-copy">Client sites fund the studio. Game R&amp;D is where the team stress-tests architecture: Lua, Love2D, procedural worlds, and simulation loops we iterate on from Las Cruces.</p>
+                    <h2 class="text-3xl md:text-5xl text-white mb-5">Game development at Blacnova Studio</h2>
+                    <p class="bn-game-copy">Our Las Cruces studio builds original games and prototypes in Lua and LÖVE. These projects explore procedural worlds, character behavior, and the systems that make a simulation feel alive.</p>
                 </div>
 
                 <article class="mb-20 md:mb-28">
                     <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start mb-8">
                         <div class="lg:col-span-7">
-                            <img src="../../ui/img/games/pixelvida-night.jpg" alt="Pixelvida at night with rain over a generated city skyline" class="bn-game-shot">
+                            <img src="/ui/img/optimized/games/pixelvida-night.webp" alt="Pixelvida at night with rain over a generated city skyline" class="bn-game-shot" width="1200" height="667" loading="lazy" decoding="async">
                         </div>
                         <div class="lg:col-span-5">
                             <span class="bn-game-kicker">Pixelvida</span>
                             <h3 class="text-2xl md:text-3xl text-white mb-4">A 2D survival sandbox built from Lua and Love2D primitives.</h3>
                             <div class="bn-game-copy">
-                                <p>Pixelvida is the studio's flagship internal game project: a 2D survival sandbox authored entirely in Lua on Love2D. The brief was architectural honesty. Own the game loop, keep a living world in memory, and avoid black-box engines that paper over hard problems.</p>
+                                <p>Pixelvida is the studio's flagship internal game project: a 2D survival sandbox authored entirely in Lua on Love2D. The team built the core game loop and world simulation directly, with systems for combat, farming, weather, and non-player characters.</p>
                                 <p>The runtime drives a day and night cycle, weather, zombie combat AI, crop farming, and crafting for structures such as campfires and chests. A hoverboard handles traversal. The map is generated at runtime rather than authored as a static scene.</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="bn-game-shot-grid mb-8">
-                        <img src="../../ui/img/games/pixelvida-1.jpg" alt="Pixelvida daytime quests and city skyline" class="bn-game-shot" loading="lazy">
-                        <img src="../../ui/img/games/pixelvida-3.jpg" alt="Pixelvida NPC dialogue with a farmer at dusk" class="bn-game-shot" loading="lazy">
-                        <img src="../../ui/img/games/pixelvida-4.jpg" alt="Pixelvida chest inventory over the city" class="bn-game-shot" loading="lazy">
+                        <img src="/ui/img/optimized/games/pixelvida-1.webp" alt="Pixelvida daytime quests and city skyline" class="bn-game-shot" width="1200" height="668" loading="lazy" decoding="async">
+                        <img src="/ui/img/optimized/games/pixelvida-3.webp" alt="Pixelvida NPC dialogue with a farmer at dusk" class="bn-game-shot" width="1200" height="670" loading="lazy" decoding="async">
+                        <img src="/ui/img/optimized/games/pixelvida-4.webp" alt="Pixelvida chest inventory over the city" class="bn-game-shot" width="1200" height="673" loading="lazy" decoding="async">
                     </div>
 
                     <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
@@ -475,13 +366,13 @@
                             </div>
                         </div>
                         <div class="lg:col-span-7">
-                            <img src="../../ui/img/games/community-1.jpg" alt="Pixelvida Community town plaza and armory" class="bn-game-shot">
+                            <img src="/ui/img/optimized/games/community-1.webp" alt="Pixelvida Community town plaza and armory" class="bn-game-shot" width="1200" height="627" loading="lazy" decoding="async">
                         </div>
                     </div>
                     <div class="bn-game-shot-grid">
-                        <img src="../../ui/img/games/community-2.jpg" alt="Pixelvida Community farming and shoreline" class="bn-game-shot" loading="lazy">
-                        <img src="../../ui/img/games/community-3.jpg" alt="Pixelvida Community combat near water" class="bn-game-shot" loading="lazy">
-                        <img src="../../ui/img/games/community-armory.jpg" alt="Pixelvida Community armory shop" class="bn-game-shot" loading="lazy">
+                        <img src="/ui/img/optimized/games/community-2.webp" alt="Pixelvida Community farming and shoreline" class="bn-game-shot" width="1200" height="633" loading="lazy" decoding="async">
+                        <img src="/ui/img/optimized/games/community-3.webp" alt="Pixelvida Community combat near water" class="bn-game-shot" width="1200" height="633" loading="lazy" decoding="async">
+                        <img src="/ui/img/optimized/games/community-armory.webp" alt="Pixelvida Community armory shop" class="bn-game-shot" width="1200" height="630" loading="lazy" decoding="async">
                     </div>
                 </article>
 
@@ -497,8 +388,8 @@
                         </div>
                         <div class="lg:col-span-7">
                             <div class="bn-game-shot-grid bn-game-shot-grid--two">
-                                <img src="../../ui/img/games/blockblast-1.jpg" alt="Block Blast gameplay on a dark board" class="bn-game-shot" loading="lazy">
-                                <img src="../../ui/img/games/blockblast-2.jpg" alt="Block Blast in-game shop" class="bn-game-shot" loading="lazy">
+                                <img src="/ui/img/optimized/games/blockblast-1.webp" alt="Block Blast gameplay on a dark board" class="bn-game-shot" width="1200" height="579" loading="lazy" decoding="async">
+                                <img src="/ui/img/optimized/games/blockblast-2.webp" alt="Block Blast in-game shop" class="bn-game-shot" width="1200" height="674" loading="lazy" decoding="async">
                             </div>
                         </div>
                     </div>
@@ -523,13 +414,6 @@
     </footer>
     
    <script src="../../ui/js/ui.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/simmerjs@1.0.3/dist/shimmer.min.js"></script>
 
     <script src="../../ui/js/BN-Cta.js"></script>
     <script src="../../ui/js/BN-Contact.js"></script>
@@ -567,29 +451,6 @@
                 });
             }
 
-            // Update footer year
-            document.getElementById('year').textContent = new Date().getFullYear();
-
-            // Mobile menu toggle
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const closeMenuButton = document.getElementById('close-menu-button');
-            const menuOverlay = document.getElementById('menu-overlay');
-
-            mobileMenuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('closed');
-                menuOverlay.classList.toggle('hidden');
-            });
-
-            closeMenuButton.addEventListener('click', () => {
-                mobileMenu.classList.add('closed');
-                menuOverlay.classList.add('hidden');
-            });
-
-            menuOverlay.addEventListener('click', () => {
-                mobileMenu.classList.add('closed');
-                menuOverlay.classList.add('hidden');
-            });
         });
     </script>
 </body>
