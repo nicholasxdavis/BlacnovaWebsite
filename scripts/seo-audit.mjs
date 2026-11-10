@@ -28,7 +28,7 @@ for (const f of requiredRoot) {
 
 function walk(dir, out = []) {
   for (const name of readdirSync(dir)) {
-    if (name === 'node_modules' || name === '.git') continue;
+    if (name === 'node_modules' || name.startsWith('.')) continue;
     const p = join(dir, name);
     if (statSync(p).isDirectory()) walk(p, out);
     else if (name.endsWith('.html')) out.push(p);
@@ -39,6 +39,7 @@ function walk(dir, out = []) {
 const htmlFiles = walk(ROOT);
 for (const file of htmlFiles) {
   const rel = relative(ROOT, file).replaceAll('\\', '/');
+  if (rel === '404.html') continue;
   // skip redirect stubs (noindex)
   if (
     [
